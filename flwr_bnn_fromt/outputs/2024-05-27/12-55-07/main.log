@@ -1,0 +1,255 @@
+[2024-05-27 12:55:07,877][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-27 12:55:08,940][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:172.17.34.3': 1.0, 'accelerator_type:G': 1.0, 'memory': 83189496423.0, 'object_store_memory': 39938355609.0, 'CPU': 24.0, 'GPU': 2.0}
+[2024-05-27 12:55:08,941][flwr][INFO] - Initializing global parameters
+[2024-05-27 12:55:08,942][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-27 12:55:10,214][flwr][INFO] - Received initial parameters from one random client
+[2024-05-27 12:55:10,214][flwr][INFO] - Evaluating initial parameters
+[2024-05-27 12:55:11,598][flwr][INFO] - initial parameters (loss, other metrics): 181.86512064933777, {'accuracy': 0.0812}
+[2024-05-27 12:55:11,598][flwr][INFO] - FL starting
+[2024-05-27 12:55:11,598][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-27 12:55:13,185][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:13,503][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:13,593][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:13,857][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:13,966][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,192][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,316][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,537][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,673][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,875][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:14,876][flwr][DEBUG] - fit_round 1 received 0 results and 10 failures
+[2024-05-27 12:55:15,294][flwr][INFO] - fit progress: (1, 181.86512064933777, {'accuracy': 0.0812}, 3.6962754589039832)
+[2024-05-27 12:55:15,294][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-27 12:55:15,571][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-27 12:55:15,571][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-27 12:55:15,571][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-27 12:55:16,196][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:16,319][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:16,543][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:16,672][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:16,885][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:17,029][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:17,248][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:17,393][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:17,584][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167593, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'
+[2024-05-27 12:55:17,751][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3167591, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 165, in fit
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc2.weight.flatten()}
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1269, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Net' object has no attribute 'fc2'

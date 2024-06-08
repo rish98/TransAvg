@@ -1,0 +1,64 @@
+[2024-05-06 01:46:10,762][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-06 01:46:13,176][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 20.0, 'memory': 37939561268.0, 'node:__internal_head__': 1.0, 'object_store_memory': 18969780633.0, 'accelerator_type:G': 1.0, 'GPU': 4.0, 'node:172.17.34.49': 1.0}
+[2024-05-06 01:46:13,177][flwr][INFO] - Initializing global parameters
+[2024-05-06 01:46:13,177][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-06 01:46:15,561][flwr][INFO] - Received initial parameters from one random client
+[2024-05-06 01:46:15,562][flwr][INFO] - Evaluating initial parameters
+[2024-05-06 01:46:20,630][flwr][INFO] - initial parameters (loss, other metrics): 3641.6276206970215, {'accuracy': 0.1004}
+[2024-05-06 01:46:20,630][flwr][INFO] - FL starting
+[2024-05-06 01:46:20,630][flwr][DEBUG] - fit_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:46:26,840][flwr][DEBUG] - fit_round 1 received 1 results and 0 failures
+[2024-05-06 01:46:26,980][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-06 01:46:29,391][flwr][INFO] - fit progress: (1, 176.44210481643677, {'accuracy': 0.2105}, 8.761386539787054)
+[2024-05-06 01:46:29,392][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-06 01:46:43,660][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-06 01:46:43,660][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-06 01:46:43,660][flwr][DEBUG] - fit_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:46:48,800][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4014460, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model_vgg_cifar10_binary.py", line 91, in train
+    loss.backward()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+[2024-05-06 01:46:48,801][flwr][DEBUG] - fit_round 2 received 0 results and 1 failures
+[2024-05-06 01:46:51,281][flwr][INFO] - fit progress: (2, 176.44210481643677, {'accuracy': 0.2105}, 30.651501767337322)
+[2024-05-06 01:46:51,282][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-06 01:47:05,152][flwr][DEBUG] - evaluate_round 2 received 5 results and 0 failures
+[2024-05-06 01:47:05,153][flwr][DEBUG] - fit_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:47:07,626][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4015473, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model_vgg_cifar10_binary.py", line 85, in train
+    net.to(device)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 989, in to
+    return self._apply(convert)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 641, in _apply
+    module._apply(fn)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 641, in _apply
+    module._apply(fn)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 664, in _apply
+    param_applied = fn(param)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 987, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+[2024-05-06 01:47:07,626][flwr][DEBUG] - fit_round 3 received 0 results and 1 failures
+[2024-05-06 01:47:10,070][flwr][INFO] - fit progress: (3, 176.44210481643677, {'accuracy': 0.2105}, 49.439938347786665)
+[2024-05-06 01:47:10,070][flwr][DEBUG] - evaluate_round 3: strategy sampled 5 clients (out of 50)

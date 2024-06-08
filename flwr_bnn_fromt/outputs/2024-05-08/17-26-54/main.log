@@ -1,0 +1,49 @@
+[2024-05-08 17:26:54,874][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-08 17:26:57,294][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'memory': 38979364455.0, 'CPU': 20.0, 'node:172.17.34.49': 1.0, 'object_store_memory': 19489682227.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-08 17:26:57,295][flwr][INFO] - Initializing global parameters
+[2024-05-08 17:26:57,295][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-08 17:26:59,797][flwr][INFO] - Received initial parameters from one random client
+[2024-05-08 17:26:59,797][flwr][INFO] - Evaluating initial parameters
+[2024-05-08 17:27:03,221][flwr][INFO] - initial parameters (loss, other metrics): 195.27304363250732, {'accuracy': 0.0868}
+[2024-05-08 17:27:03,221][flwr][INFO] - FL starting
+[2024-05-08 17:27:03,222][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-08 17:27:54,036][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-08 17:27:56,605][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-08 17:27:58,543][flwr][INFO] - fit progress: (1, 191.36154747009277, {'accuracy': 0.5666}, 55.321830935776234)
+[2024-05-08 17:27:58,543][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-08 17:28:02,486][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-08 17:28:02,486][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-08 17:28:02,487][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-08 17:28:53,224][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-08 17:28:57,766][flwr][INFO] - fit progress: (2, 277.5148344039917, {'accuracy': 0.5789}, 114.54506827518344)
+[2024-05-08 17:28:57,767][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-08 17:29:01,724][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-08 17:29:01,725][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-08 17:29:52,504][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-08 17:29:58,796][flwr][INFO] - fit progress: (3, 256.7168636471033, {'accuracy': 0.829}, 175.5743368305266)
+[2024-05-08 17:29:58,796][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-08 17:30:02,746][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-08 17:30:02,746][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-08 17:30:52,968][flwr][DEBUG] - fit_round 4 received 10 results and 0 failures
+[2024-05-08 17:30:59,253][flwr][INFO] - fit progress: (4, 217.49195917509496, {'accuracy': 0.8617}, 236.03188781812787)
+[2024-05-08 17:30:59,253][flwr][DEBUG] - evaluate_round 4: strategy sampled 1 clients (out of 50)
+[2024-05-08 17:31:03,195][flwr][DEBUG] - evaluate_round 4 received 1 results and 0 failures
+[2024-05-08 17:31:03,195][flwr][DEBUG] - fit_round 5: strategy sampled 10 clients (out of 50)
+[2024-05-08 17:31:40,018][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4145129, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 107)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 107
+    if round in [1,,2325, 50, 75, 100]:
+                   ^
+SyntaxError: invalid syntax

@@ -1,0 +1,27 @@
+[2024-05-26 01:34:32,325][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-26 01:34:34,398][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 24.0, 'GPU': 2.0, 'accelerator_type:G': 1.0, 'memory': 82658608538.0, 'object_store_memory': 39710832230.0, 'node:172.17.34.3': 1.0}
+[2024-05-26 01:34:34,399][flwr][INFO] - Initializing global parameters
+[2024-05-26 01:34:34,400][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-26 01:34:36,114][flwr][INFO] - Received initial parameters from one random client
+[2024-05-26 01:34:36,115][flwr][INFO] - Evaluating initial parameters
+[2024-05-26 01:34:38,022][flwr][INFO] - initial parameters (loss, other metrics): 187.69328618049622, {'accuracy': 0.1455}
+[2024-05-26 01:34:38,022][flwr][INFO] - FL starting
+[2024-05-26 01:34:38,022][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-26 01:34:47,420][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-26 01:34:48,857][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-26 01:34:49,762][flwr][INFO] - fit progress: (1, 159.20567965507507, {'accuracy': 0.5838}, 11.740357517031953)
+[2024-05-26 01:34:49,762][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-26 01:34:50,424][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-26 01:34:50,424][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-26 01:34:50,424][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-26 01:34:56,437][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=2131746, ip=172.17.34.3)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/home/rkat6291/flwr_bnn_fromt/client.py", line 95, in fit
+    train_ga(self.model, self.trainloader, optim, epochs, self.device)
+NameError: name 'train_ga' is not defined
+[2024-05-26 01:34:59,519][flwr][DEBUG] - fit_round 2 received 9 results and 1 failures

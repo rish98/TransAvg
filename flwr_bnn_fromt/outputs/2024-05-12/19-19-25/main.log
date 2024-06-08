@@ -1,0 +1,341 @@
+[2024-05-12 19:19:25,652][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-12 19:19:28,086][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 20.0, 'node:172.17.34.49': 1.0, 'GPU': 4.0, 'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0, 'object_store_memory': 18168218419.0, 'memory': 36336436839.0}
+[2024-05-12 19:19:28,087][flwr][INFO] - Initializing global parameters
+[2024-05-12 19:19:28,088][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-12 19:19:30,659][flwr][INFO] - Received initial parameters from one random client
+[2024-05-12 19:19:30,659][flwr][INFO] - Evaluating initial parameters
+[2024-05-12 19:19:34,092][flwr][INFO] - initial parameters (loss, other metrics): 191.13609385490417, {'accuracy': 0.1068}
+[2024-05-12 19:19:34,092][flwr][INFO] - FL starting
+[2024-05-12 19:19:34,093][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:20:24,764][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-12 19:20:27,328][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-12 19:20:29,274][flwr][INFO] - fit progress: (1, 153.21731770038605, {'accuracy': 0.5746}, 55.18136651813984)
+[2024-05-12 19:20:29,274][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:20:33,280][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-12 19:20:33,280][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-12 19:20:33,281][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:21:23,724][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-12 19:21:28,242][flwr][INFO] - fit progress: (2, 258.1995041370392, {'accuracy': 0.6614}, 114.14910963922739)
+[2024-05-12 19:21:28,242][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:21:32,205][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-12 19:21:32,205][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:22:22,666][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-12 19:22:27,146][flwr][INFO] - fit progress: (3, 305.9293944835663, {'accuracy': 0.7071}, 173.05324079468846)
+[2024-05-12 19:22:27,146][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:22:31,137][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-12 19:22:31,137][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:23:21,760][flwr][DEBUG] - fit_round 4 received 10 results and 0 failures
+[2024-05-12 19:23:27,612][flwr][INFO] - fit progress: (4, 124.67053494416177, {'accuracy': 0.8534}, 233.51973146945238)
+[2024-05-12 19:23:27,612][flwr][DEBUG] - evaluate_round 4: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:23:31,618][flwr][DEBUG] - evaluate_round 4 received 1 results and 0 failures
+[2024-05-12 19:23:31,619][flwr][DEBUG] - fit_round 5: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:24:22,295][flwr][DEBUG] - fit_round 5 received 10 results and 0 failures
+[2024-05-12 19:24:28,096][flwr][INFO] - fit progress: (5, 132.3063998222351, {'accuracy': 0.7949}, 294.00354988127947)
+[2024-05-12 19:24:28,096][flwr][DEBUG] - evaluate_round 5: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:24:32,040][flwr][DEBUG] - evaluate_round 5 received 1 results and 0 failures
+[2024-05-12 19:24:32,040][flwr][DEBUG] - fit_round 6: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:25:23,094][flwr][DEBUG] - fit_round 6 received 10 results and 0 failures
+[2024-05-12 19:25:28,897][flwr][INFO] - fit progress: (6, 84.73419432342052, {'accuracy': 0.8435}, 354.8043982386589)
+[2024-05-12 19:25:28,897][flwr][DEBUG] - evaluate_round 6: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:25:32,887][flwr][DEBUG] - evaluate_round 6 received 1 results and 0 failures
+[2024-05-12 19:25:32,888][flwr][DEBUG] - fit_round 7: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:26:23,539][flwr][DEBUG] - fit_round 7 received 10 results and 0 failures
+[2024-05-12 19:26:29,244][flwr][INFO] - fit progress: (7, 61.626992389559746, {'accuracy': 0.7904}, 415.15129375085235)
+[2024-05-12 19:26:29,244][flwr][DEBUG] - evaluate_round 7: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:26:33,239][flwr][DEBUG] - evaluate_round 7 received 1 results and 0 failures
+[2024-05-12 19:26:33,240][flwr][DEBUG] - fit_round 8: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:27:24,763][flwr][DEBUG] - fit_round 8 received 10 results and 0 failures
+[2024-05-12 19:27:30,649][flwr][INFO] - fit progress: (8, 65.16022875905037, {'accuracy': 0.7517}, 476.55671256035566)
+[2024-05-12 19:27:30,649][flwr][DEBUG] - evaluate_round 8: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:27:34,625][flwr][DEBUG] - evaluate_round 8 received 1 results and 0 failures
+[2024-05-12 19:27:34,626][flwr][DEBUG] - fit_round 9: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:28:25,390][flwr][DEBUG] - fit_round 9 received 10 results and 0 failures
+[2024-05-12 19:28:31,127][flwr][INFO] - fit progress: (9, 66.13148337602615, {'accuracy': 0.7433}, 537.0341894030571)
+[2024-05-12 19:28:31,127][flwr][DEBUG] - evaluate_round 9: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:28:35,099][flwr][DEBUG] - evaluate_round 9 received 1 results and 0 failures
+[2024-05-12 19:28:35,100][flwr][DEBUG] - fit_round 10: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:29:26,160][flwr][DEBUG] - fit_round 10 received 10 results and 0 failures
+[2024-05-12 19:29:31,910][flwr][INFO] - fit progress: (10, 119.31968832015991, {'accuracy': 0.8074}, 597.8178807348013)
+[2024-05-12 19:29:31,911][flwr][DEBUG] - evaluate_round 10: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:29:35,838][flwr][DEBUG] - evaluate_round 10 received 1 results and 0 failures
+[2024-05-12 19:29:35,839][flwr][DEBUG] - fit_round 11: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:30:26,474][flwr][DEBUG] - fit_round 11 received 10 results and 0 failures
+[2024-05-12 19:30:32,269][flwr][INFO] - fit progress: (11, 59.10830429196358, {'accuracy': 0.811}, 658.1770000942051)
+[2024-05-12 19:30:32,270][flwr][DEBUG] - evaluate_round 11: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:30:36,212][flwr][DEBUG] - evaluate_round 11 received 1 results and 0 failures
+[2024-05-12 19:30:36,213][flwr][DEBUG] - fit_round 12: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:31:27,686][flwr][DEBUG] - fit_round 12 received 10 results and 0 failures
+[2024-05-12 19:31:33,482][flwr][INFO] - fit progress: (12, 46.41263973712921, {'accuracy': 0.8548}, 719.3892123065889)
+[2024-05-12 19:31:33,482][flwr][DEBUG] - evaluate_round 12: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:31:37,424][flwr][DEBUG] - evaluate_round 12 received 1 results and 0 failures
+[2024-05-12 19:31:37,425][flwr][DEBUG] - fit_round 13: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:32:28,222][flwr][DEBUG] - fit_round 13 received 10 results and 0 failures
+[2024-05-12 19:32:34,096][flwr][INFO] - fit progress: (13, 36.673485819250345, {'accuracy': 0.8629}, 780.0034843981266)
+[2024-05-12 19:32:34,096][flwr][DEBUG] - evaluate_round 13: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:32:38,060][flwr][DEBUG] - evaluate_round 13 received 1 results and 0 failures
+[2024-05-12 19:32:38,061][flwr][DEBUG] - fit_round 14: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:33:28,604][flwr][DEBUG] - fit_round 14 received 10 results and 0 failures
+[2024-05-12 19:33:34,467][flwr][INFO] - fit progress: (14, 71.19967490434647, {'accuracy': 0.8708}, 840.3742343373597)
+[2024-05-12 19:33:34,467][flwr][DEBUG] - evaluate_round 14: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:33:38,443][flwr][DEBUG] - evaluate_round 14 received 1 results and 0 failures
+[2024-05-12 19:33:38,443][flwr][DEBUG] - fit_round 15: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:34:29,118][flwr][DEBUG] - fit_round 15 received 10 results and 0 failures
+[2024-05-12 19:34:35,001][flwr][INFO] - fit progress: (15, 41.21154297143221, {'accuracy': 0.8486}, 900.9090004712343)
+[2024-05-12 19:34:35,002][flwr][DEBUG] - evaluate_round 15: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:34:38,994][flwr][DEBUG] - evaluate_round 15 received 1 results and 0 failures
+[2024-05-12 19:34:38,995][flwr][DEBUG] - fit_round 16: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:35:29,752][flwr][DEBUG] - fit_round 16 received 10 results and 0 failures
+[2024-05-12 19:35:35,513][flwr][INFO] - fit progress: (16, 43.638122871518135, {'accuracy': 0.8562}, 961.42085198313)
+[2024-05-12 19:35:35,513][flwr][DEBUG] - evaluate_round 16: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:35:39,459][flwr][DEBUG] - evaluate_round 16 received 1 results and 0 failures
+[2024-05-12 19:35:39,459][flwr][DEBUG] - fit_round 17: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:36:29,952][flwr][DEBUG] - fit_round 17 received 10 results and 0 failures
+[2024-05-12 19:36:35,793][flwr][INFO] - fit progress: (17, 35.39882119372487, {'accuracy': 0.868}, 1021.7002015411854)
+[2024-05-12 19:36:35,793][flwr][DEBUG] - evaluate_round 17: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:36:39,720][flwr][DEBUG] - evaluate_round 17 received 1 results and 0 failures
+[2024-05-12 19:36:39,721][flwr][DEBUG] - fit_round 18: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:37:30,855][flwr][DEBUG] - fit_round 18 received 10 results and 0 failures
+[2024-05-12 19:37:36,760][flwr][INFO] - fit progress: (18, 37.875357791781425, {'accuracy': 0.8774}, 1082.6677778922021)
+[2024-05-12 19:37:36,760][flwr][DEBUG] - evaluate_round 18: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:37:40,727][flwr][DEBUG] - evaluate_round 18 received 1 results and 0 failures
+[2024-05-12 19:37:40,727][flwr][DEBUG] - fit_round 19: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:38:31,589][flwr][DEBUG] - fit_round 19 received 10 results and 0 failures
+[2024-05-12 19:38:37,402][flwr][INFO] - fit progress: (19, 31.95672734081745, {'accuracy': 0.8784}, 1143.3100532107055)
+[2024-05-12 19:38:37,403][flwr][DEBUG] - evaluate_round 19: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:38:41,402][flwr][DEBUG] - evaluate_round 19 received 1 results and 0 failures
+[2024-05-12 19:38:41,403][flwr][DEBUG] - fit_round 20: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:39:32,711][flwr][DEBUG] - fit_round 20 received 10 results and 0 failures
+[2024-05-12 19:39:38,563][flwr][INFO] - fit progress: (20, 29.412841357290745, {'accuracy': 0.8872}, 1204.4707497097552)
+[2024-05-12 19:39:38,563][flwr][DEBUG] - evaluate_round 20: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:39:42,591][flwr][DEBUG] - evaluate_round 20 received 1 results and 0 failures
+[2024-05-12 19:39:42,592][flwr][DEBUG] - fit_round 21: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:40:33,532][flwr][DEBUG] - fit_round 21 received 10 results and 0 failures
+[2024-05-12 19:40:39,428][flwr][INFO] - fit progress: (21, 37.67685015499592, {'accuracy': 0.8756}, 1265.3354745171964)
+[2024-05-12 19:40:39,428][flwr][DEBUG] - evaluate_round 21: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:40:43,383][flwr][DEBUG] - evaluate_round 21 received 1 results and 0 failures
+[2024-05-12 19:40:43,384][flwr][DEBUG] - fit_round 22: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:41:34,320][flwr][DEBUG] - fit_round 22 received 10 results and 0 failures
+[2024-05-12 19:41:40,136][flwr][INFO] - fit progress: (22, 34.89611552655697, {'accuracy': 0.8921}, 1326.0438941977918)
+[2024-05-12 19:41:40,137][flwr][DEBUG] - evaluate_round 22: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:41:44,096][flwr][DEBUG] - evaluate_round 22 received 1 results and 0 failures
+[2024-05-12 19:41:44,097][flwr][DEBUG] - fit_round 23: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:42:35,020][flwr][DEBUG] - fit_round 23 received 10 results and 0 failures
+[2024-05-12 19:42:40,883][flwr][INFO] - fit progress: (23, 33.61909719184041, {'accuracy': 0.8751}, 1386.790278751403)
+[2024-05-12 19:42:40,883][flwr][DEBUG] - evaluate_round 23: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:42:44,873][flwr][DEBUG] - evaluate_round 23 received 1 results and 0 failures
+[2024-05-12 19:42:44,873][flwr][DEBUG] - fit_round 24: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:43:35,532][flwr][DEBUG] - fit_round 24 received 10 results and 0 failures
+[2024-05-12 19:43:41,381][flwr][INFO] - fit progress: (24, 35.344929561018944, {'accuracy': 0.8823}, 1447.2885232381523)
+[2024-05-12 19:43:41,381][flwr][DEBUG] - evaluate_round 24: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:43:45,386][flwr][DEBUG] - evaluate_round 24 received 1 results and 0 failures
+[2024-05-12 19:43:45,387][flwr][DEBUG] - fit_round 25: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:44:36,752][flwr][DEBUG] - fit_round 25 received 10 results and 0 failures
+[2024-05-12 19:44:42,562][flwr][INFO] - fit progress: (25, 61.87314409017563, {'accuracy': 0.8702}, 1508.4698787815869)
+[2024-05-12 19:44:42,563][flwr][DEBUG] - evaluate_round 25: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:44:46,523][flwr][DEBUG] - evaluate_round 25 received 1 results and 0 failures
+[2024-05-12 19:44:46,523][flwr][DEBUG] - fit_round 26: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:45:37,666][flwr][DEBUG] - fit_round 26 received 10 results and 0 failures
+[2024-05-12 19:45:43,476][flwr][INFO] - fit progress: (26, 33.84640873596072, {'accuracy': 0.8839}, 1569.3832227401435)
+[2024-05-12 19:45:43,476][flwr][DEBUG] - evaluate_round 26: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:45:47,436][flwr][DEBUG] - evaluate_round 26 received 1 results and 0 failures
+[2024-05-12 19:45:47,437][flwr][DEBUG] - fit_round 27: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:46:38,230][flwr][DEBUG] - fit_round 27 received 10 results and 0 failures
+[2024-05-12 19:46:43,995][flwr][INFO] - fit progress: (27, 70.90527069568634, {'accuracy': 0.8408}, 1629.9025235958397)
+[2024-05-12 19:46:43,995][flwr][DEBUG] - evaluate_round 27: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:46:48,030][flwr][DEBUG] - evaluate_round 27 received 1 results and 0 failures
+[2024-05-12 19:46:48,031][flwr][DEBUG] - fit_round 28: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:47:39,239][flwr][DEBUG] - fit_round 28 received 10 results and 0 failures
+[2024-05-12 19:47:45,130][flwr][INFO] - fit progress: (28, 31.08180551044643, {'accuracy': 0.8919}, 1691.0376225747168)
+[2024-05-12 19:47:45,130][flwr][DEBUG] - evaluate_round 28: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:47:49,083][flwr][DEBUG] - evaluate_round 28 received 1 results and 0 failures
+[2024-05-12 19:47:49,083][flwr][DEBUG] - fit_round 29: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:48:40,525][flwr][DEBUG] - fit_round 29 received 10 results and 0 failures
+[2024-05-12 19:48:46,364][flwr][INFO] - fit progress: (29, 36.02963485568762, {'accuracy': 0.8746}, 1752.2716121189296)
+[2024-05-12 19:48:46,364][flwr][DEBUG] - evaluate_round 29: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:48:50,287][flwr][DEBUG] - evaluate_round 29 received 1 results and 0 failures
+[2024-05-12 19:48:50,287][flwr][DEBUG] - fit_round 30: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:49:41,211][flwr][DEBUG] - fit_round 30 received 10 results and 0 failures
+[2024-05-12 19:49:47,100][flwr][INFO] - fit progress: (30, 34.0628751963377, {'accuracy': 0.8826}, 1813.0080091133714)
+[2024-05-12 19:49:47,101][flwr][DEBUG] - evaluate_round 30: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:49:51,083][flwr][DEBUG] - evaluate_round 30 received 1 results and 0 failures
+[2024-05-12 19:49:51,084][flwr][DEBUG] - fit_round 31: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:50:41,732][flwr][DEBUG] - fit_round 31 received 10 results and 0 failures
+[2024-05-12 19:50:47,570][flwr][INFO] - fit progress: (31, 42.530619487166405, {'accuracy': 0.8518}, 1873.4776558876038)
+[2024-05-12 19:50:47,570][flwr][DEBUG] - evaluate_round 31: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:50:51,521][flwr][DEBUG] - evaluate_round 31 received 1 results and 0 failures
+[2024-05-12 19:50:51,521][flwr][DEBUG] - fit_round 32: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:51:42,797][flwr][DEBUG] - fit_round 32 received 10 results and 0 failures
+[2024-05-12 19:51:48,668][flwr][INFO] - fit progress: (32, 38.36910642683506, {'accuracy': 0.8616}, 1934.5759854465723)
+[2024-05-12 19:51:48,669][flwr][DEBUG] - evaluate_round 32: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:51:52,663][flwr][DEBUG] - evaluate_round 32 received 1 results and 0 failures
+[2024-05-12 19:51:52,664][flwr][DEBUG] - fit_round 33: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:52:43,796][flwr][DEBUG] - fit_round 33 received 10 results and 0 failures
+[2024-05-12 19:52:49,684][flwr][INFO] - fit progress: (33, 34.55109614133835, {'accuracy': 0.873}, 1995.591545138508)
+[2024-05-12 19:52:49,684][flwr][DEBUG] - evaluate_round 33: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:52:53,644][flwr][DEBUG] - evaluate_round 33 received 1 results and 0 failures
+[2024-05-12 19:52:53,645][flwr][DEBUG] - fit_round 34: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:53:44,675][flwr][DEBUG] - fit_round 34 received 10 results and 0 failures
+[2024-05-12 19:53:50,536][flwr][INFO] - fit progress: (34, 34.61305232346058, {'accuracy': 0.8829}, 2056.443533986807)
+[2024-05-12 19:53:50,536][flwr][DEBUG] - evaluate_round 34: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:53:54,547][flwr][DEBUG] - evaluate_round 34 received 1 results and 0 failures
+[2024-05-12 19:53:54,548][flwr][DEBUG] - fit_round 35: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:54:45,301][flwr][DEBUG] - fit_round 35 received 10 results and 0 failures
+[2024-05-12 19:54:51,151][flwr][INFO] - fit progress: (35, 70.75163096189499, {'accuracy': 0.8572}, 2117.059066310525)
+[2024-05-12 19:54:51,152][flwr][DEBUG] - evaluate_round 35: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:54:55,172][flwr][DEBUG] - evaluate_round 35 received 1 results and 0 failures
+[2024-05-12 19:54:55,173][flwr][DEBUG] - fit_round 36: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:55:46,073][flwr][DEBUG] - fit_round 36 received 10 results and 0 failures
+[2024-05-12 19:55:51,954][flwr][INFO] - fit progress: (36, 33.025119848549366, {'accuracy': 0.8912}, 2177.861398871988)
+[2024-05-12 19:55:51,954][flwr][DEBUG] - evaluate_round 36: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:55:55,899][flwr][DEBUG] - evaluate_round 36 received 1 results and 0 failures
+[2024-05-12 19:55:55,900][flwr][DEBUG] - fit_round 37: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:56:46,966][flwr][DEBUG] - fit_round 37 received 10 results and 0 failures
+[2024-05-12 19:56:52,813][flwr][INFO] - fit progress: (37, 34.17460207268596, {'accuracy': 0.8756}, 2238.720876146108)
+[2024-05-12 19:56:52,813][flwr][DEBUG] - evaluate_round 37: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:56:56,814][flwr][DEBUG] - evaluate_round 37 received 1 results and 0 failures
+[2024-05-12 19:56:56,815][flwr][DEBUG] - fit_round 38: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:57:48,117][flwr][DEBUG] - fit_round 38 received 10 results and 0 failures
+[2024-05-12 19:57:53,998][flwr][INFO] - fit progress: (38, 33.698211915791035, {'accuracy': 0.8843}, 2299.905560567975)
+[2024-05-12 19:57:53,998][flwr][DEBUG] - evaluate_round 38: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:57:57,952][flwr][DEBUG] - evaluate_round 38 received 1 results and 0 failures
+[2024-05-12 19:57:57,953][flwr][DEBUG] - fit_round 39: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:58:49,101][flwr][DEBUG] - fit_round 39 received 10 results and 0 failures
+[2024-05-12 19:58:54,937][flwr][INFO] - fit progress: (39, 49.41873386502266, {'accuracy': 0.8159}, 2360.8450302779675)
+[2024-05-12 19:58:54,938][flwr][DEBUG] - evaluate_round 39: strategy sampled 1 clients (out of 50)
+[2024-05-12 19:58:58,923][flwr][DEBUG] - evaluate_round 39 received 1 results and 0 failures
+[2024-05-12 19:58:58,923][flwr][DEBUG] - fit_round 40: strategy sampled 10 clients (out of 50)
+[2024-05-12 19:59:50,305][flwr][DEBUG] - fit_round 40 received 10 results and 0 failures
+[2024-05-12 19:59:56,192][flwr][INFO] - fit progress: (40, 78.1254363656044, {'accuracy': 0.8433}, 2422.0997333861887)
+[2024-05-12 19:59:56,192][flwr][DEBUG] - evaluate_round 40: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:00:00,202][flwr][DEBUG] - evaluate_round 40 received 1 results and 0 failures
+[2024-05-12 20:00:00,203][flwr][DEBUG] - fit_round 41: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:00:50,989][flwr][DEBUG] - fit_round 41 received 10 results and 0 failures
+[2024-05-12 20:00:56,767][flwr][INFO] - fit progress: (41, 50.57379561662674, {'accuracy': 0.8334}, 2482.6744934245944)
+[2024-05-12 20:00:56,767][flwr][DEBUG] - evaluate_round 41: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:01:00,879][flwr][DEBUG] - evaluate_round 41 received 1 results and 0 failures
+[2024-05-12 20:01:00,880][flwr][DEBUG] - fit_round 42: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:01:52,348][flwr][DEBUG] - fit_round 42 received 10 results and 0 failures
+[2024-05-12 20:01:58,268][flwr][INFO] - fit progress: (42, 37.19014412164688, {'accuracy': 0.8646}, 2544.175525188446)
+[2024-05-12 20:01:58,268][flwr][DEBUG] - evaluate_round 42: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:02:02,231][flwr][DEBUG] - evaluate_round 42 received 1 results and 0 failures
+[2024-05-12 20:02:02,231][flwr][DEBUG] - fit_round 43: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:02:53,361][flwr][DEBUG] - fit_round 43 received 10 results and 0 failures
+[2024-05-12 20:02:59,146][flwr][INFO] - fit progress: (43, 65.35980689525604, {'accuracy': 0.8571}, 2605.0539949908853)
+[2024-05-12 20:02:59,147][flwr][DEBUG] - evaluate_round 43: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:03:03,121][flwr][DEBUG] - evaluate_round 43 received 1 results and 0 failures
+[2024-05-12 20:03:03,122][flwr][DEBUG] - fit_round 44: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:03:53,646][flwr][DEBUG] - fit_round 44 received 10 results and 0 failures
+[2024-05-12 20:03:59,468][flwr][INFO] - fit progress: (44, 34.72066421806812, {'accuracy': 0.871}, 2665.3757546395063)
+[2024-05-12 20:03:59,468][flwr][DEBUG] - evaluate_round 44: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:04:03,474][flwr][DEBUG] - evaluate_round 44 received 1 results and 0 failures
+[2024-05-12 20:04:03,475][flwr][DEBUG] - fit_round 45: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:04:54,208][flwr][DEBUG] - fit_round 45 received 10 results and 0 failures
+[2024-05-12 20:05:00,044][flwr][INFO] - fit progress: (45, 41.431107237935066, {'accuracy': 0.8679}, 2725.9514269419014)
+[2024-05-12 20:05:00,044][flwr][DEBUG] - evaluate_round 45: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:05:04,013][flwr][DEBUG] - evaluate_round 45 received 1 results and 0 failures
+[2024-05-12 20:05:04,014][flwr][DEBUG] - fit_round 46: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:05:55,333][flwr][DEBUG] - fit_round 46 received 10 results and 0 failures
+[2024-05-12 20:06:01,133][flwr][INFO] - fit progress: (46, 33.43014618009329, {'accuracy': 0.8729}, 2787.0406508669257)
+[2024-05-12 20:06:01,133][flwr][DEBUG] - evaluate_round 46: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:06:05,094][flwr][DEBUG] - evaluate_round 46 received 1 results and 0 failures
+[2024-05-12 20:06:05,095][flwr][DEBUG] - fit_round 47: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:06:56,082][flwr][DEBUG] - fit_round 47 received 10 results and 0 failures
+[2024-05-12 20:07:01,854][flwr][INFO] - fit progress: (47, 41.05011363327503, {'accuracy': 0.8599}, 2847.761515889317)
+[2024-05-12 20:07:01,854][flwr][DEBUG] - evaluate_round 47: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:07:05,861][flwr][DEBUG] - evaluate_round 47 received 1 results and 0 failures
+[2024-05-12 20:07:05,862][flwr][DEBUG] - fit_round 48: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:07:56,684][flwr][DEBUG] - fit_round 48 received 10 results and 0 failures
+[2024-05-12 20:08:02,528][flwr][INFO] - fit progress: (48, 41.47894366085529, {'accuracy': 0.8633}, 2908.4357997514307)
+[2024-05-12 20:08:02,528][flwr][DEBUG] - evaluate_round 48: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:08:06,499][flwr][DEBUG] - evaluate_round 48 received 1 results and 0 failures
+[2024-05-12 20:08:06,499][flwr][DEBUG] - fit_round 49: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:08:57,457][flwr][DEBUG] - fit_round 49 received 10 results and 0 failures
+[2024-05-12 20:09:03,314][flwr][INFO] - fit progress: (49, 31.70857907831669, {'accuracy': 0.8847}, 2969.221456259489)
+[2024-05-12 20:09:03,314][flwr][DEBUG] - evaluate_round 49: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:09:07,335][flwr][DEBUG] - evaluate_round 49 received 1 results and 0 failures
+[2024-05-12 20:09:07,335][flwr][DEBUG] - fit_round 50: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:09:58,376][flwr][DEBUG] - fit_round 50 received 10 results and 0 failures
+[2024-05-12 20:10:04,172][flwr][INFO] - fit progress: (50, 30.017930883914232, {'accuracy': 0.8859}, 3030.0796009786427)
+[2024-05-12 20:10:04,172][flwr][DEBUG] - evaluate_round 50: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:10:08,145][flwr][DEBUG] - evaluate_round 50 received 1 results and 0 failures
+[2024-05-12 20:10:08,146][flwr][DEBUG] - fit_round 51: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:10:59,012][flwr][DEBUG] - fit_round 51 received 10 results and 0 failures
+[2024-05-12 20:11:04,751][flwr][INFO] - fit progress: (51, 29.867790250107646, {'accuracy': 0.8875}, 3090.658464074135)
+[2024-05-12 20:11:04,751][flwr][DEBUG] - evaluate_round 51: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:11:08,701][flwr][DEBUG] - evaluate_round 51 received 1 results and 0 failures
+[2024-05-12 20:11:08,702][flwr][DEBUG] - fit_round 52: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:11:59,788][flwr][DEBUG] - fit_round 52 received 10 results and 0 failures
+[2024-05-12 20:12:05,586][flwr][INFO] - fit progress: (52, 33.389361046254635, {'accuracy': 0.8929}, 3151.4940118193626)
+[2024-05-12 20:12:05,587][flwr][DEBUG] - evaluate_round 52: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:12:09,513][flwr][DEBUG] - evaluate_round 52 received 1 results and 0 failures
+[2024-05-12 20:12:09,514][flwr][DEBUG] - fit_round 53: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:13:00,411][flwr][DEBUG] - fit_round 53 received 10 results and 0 failures
+[2024-05-12 20:13:06,226][flwr][INFO] - fit progress: (53, 67.43116265535355, {'accuracy': 0.8659}, 3212.133347827941)
+[2024-05-12 20:13:06,226][flwr][DEBUG] - evaluate_round 53: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:13:10,190][flwr][DEBUG] - evaluate_round 53 received 1 results and 0 failures
+[2024-05-12 20:13:10,191][flwr][DEBUG] - fit_round 54: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:14:01,570][flwr][DEBUG] - fit_round 54 received 10 results and 0 failures
+[2024-05-12 20:14:07,435][flwr][INFO] - fit progress: (54, 40.657235473394394, {'accuracy': 0.8659}, 3273.3429793417454)
+[2024-05-12 20:14:07,436][flwr][DEBUG] - evaluate_round 54: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:14:11,362][flwr][DEBUG] - evaluate_round 54 received 1 results and 0 failures
+[2024-05-12 20:14:11,363][flwr][DEBUG] - fit_round 55: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:15:02,014][flwr][DEBUG] - fit_round 55 received 10 results and 0 failures
+[2024-05-12 20:15:07,872][flwr][INFO] - fit progress: (55, 78.81360727548599, {'accuracy': 0.8119}, 3333.77971098572)
+[2024-05-12 20:15:07,872][flwr][DEBUG] - evaluate_round 55: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:15:11,810][flwr][DEBUG] - evaluate_round 55 received 1 results and 0 failures
+[2024-05-12 20:15:11,811][flwr][DEBUG] - fit_round 56: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:16:03,012][flwr][DEBUG] - fit_round 56 received 10 results and 0 failures
+[2024-05-12 20:16:08,816][flwr][INFO] - fit progress: (56, 71.3066685795784, {'accuracy': 0.8583}, 3394.723617885262)
+[2024-05-12 20:16:08,816][flwr][DEBUG] - evaluate_round 56: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:16:12,797][flwr][DEBUG] - evaluate_round 56 received 1 results and 0 failures
+[2024-05-12 20:16:12,797][flwr][DEBUG] - fit_round 57: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:17:03,985][flwr][DEBUG] - fit_round 57 received 10 results and 0 failures
+[2024-05-12 20:17:09,850][flwr][INFO] - fit progress: (57, 62.14914411306381, {'accuracy': 0.8447}, 3455.7579301036894)
+[2024-05-12 20:17:09,851][flwr][DEBUG] - evaluate_round 57: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:17:13,796][flwr][DEBUG] - evaluate_round 57 received 1 results and 0 failures
+[2024-05-12 20:17:13,796][flwr][DEBUG] - fit_round 58: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:18:04,777][flwr][DEBUG] - fit_round 58 received 10 results and 0 failures
+[2024-05-12 20:18:10,604][flwr][INFO] - fit progress: (58, 139.6286962032318, {'accuracy': 0.5442}, 3516.511398769915)
+[2024-05-12 20:18:10,604][flwr][DEBUG] - evaluate_round 58: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:18:14,555][flwr][DEBUG] - evaluate_round 58 received 1 results and 0 failures
+[2024-05-12 20:18:14,555][flwr][DEBUG] - fit_round 59: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:19:05,567][flwr][DEBUG] - fit_round 59 received 10 results and 0 failures
+[2024-05-12 20:19:11,405][flwr][INFO] - fit progress: (59, 56.21931217610836, {'accuracy': 0.7748}, 3577.3124922178686)
+[2024-05-12 20:19:11,405][flwr][DEBUG] - evaluate_round 59: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:19:15,389][flwr][DEBUG] - evaluate_round 59 received 1 results and 0 failures
+[2024-05-12 20:19:15,389][flwr][DEBUG] - fit_round 60: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:20:06,286][flwr][DEBUG] - fit_round 60 received 10 results and 0 failures
+[2024-05-12 20:20:12,160][flwr][INFO] - fit progress: (60, 69.69133496284485, {'accuracy': 0.7656}, 3638.0674250759184)
+[2024-05-12 20:20:12,160][flwr][DEBUG] - evaluate_round 60: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:20:16,096][flwr][DEBUG] - evaluate_round 60 received 1 results and 0 failures
+[2024-05-12 20:20:16,096][flwr][DEBUG] - fit_round 61: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:21:07,426][flwr][DEBUG] - fit_round 61 received 10 results and 0 failures
+[2024-05-12 20:21:13,242][flwr][INFO] - fit progress: (61, 60.88190841674805, {'accuracy': 0.7806}, 3699.1494458802044)
+[2024-05-12 20:21:13,242][flwr][DEBUG] - evaluate_round 61: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:21:17,210][flwr][DEBUG] - evaluate_round 61 received 1 results and 0 failures
+[2024-05-12 20:21:17,211][flwr][DEBUG] - fit_round 62: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:22:08,145][flwr][DEBUG] - fit_round 62 received 10 results and 0 failures
+[2024-05-12 20:22:14,134][flwr][INFO] - fit progress: (62, 49.540970757603645, {'accuracy': 0.8016}, 3760.041486941278)
+[2024-05-12 20:22:14,134][flwr][DEBUG] - evaluate_round 62: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:22:18,025][flwr][DEBUG] - evaluate_round 62 received 1 results and 0 failures
+[2024-05-12 20:22:18,026][flwr][DEBUG] - fit_round 63: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:23:08,791][flwr][DEBUG] - fit_round 63 received 10 results and 0 failures
+[2024-05-12 20:23:14,626][flwr][INFO] - fit progress: (63, 55.7069171667099, {'accuracy': 0.8589}, 3820.5334846563637)
+[2024-05-12 20:23:14,626][flwr][DEBUG] - evaluate_round 63: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:23:18,576][flwr][DEBUG] - evaluate_round 63 received 1 results and 0 failures
+[2024-05-12 20:23:18,577][flwr][DEBUG] - fit_round 64: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:24:10,158][flwr][DEBUG] - fit_round 64 received 10 results and 0 failures
+[2024-05-12 20:24:16,042][flwr][INFO] - fit progress: (64, 38.48552479594946, {'accuracy': 0.8566}, 3881.9498770833015)
+[2024-05-12 20:24:16,043][flwr][DEBUG] - evaluate_round 64: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:24:20,117][flwr][DEBUG] - evaluate_round 64 received 1 results and 0 failures
+[2024-05-12 20:24:20,117][flwr][DEBUG] - fit_round 65: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:25:11,384][flwr][DEBUG] - fit_round 65 received 10 results and 0 failures
+[2024-05-12 20:25:17,133][flwr][INFO] - fit progress: (65, 66.61623841524124, {'accuracy': 0.7823}, 3943.040275350213)
+[2024-05-12 20:25:17,133][flwr][DEBUG] - evaluate_round 65: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:25:21,130][flwr][DEBUG] - evaluate_round 65 received 1 results and 0 failures
+[2024-05-12 20:25:21,130][flwr][DEBUG] - fit_round 66: strategy sampled 10 clients (out of 50)
+[2024-05-12 20:26:12,116][flwr][DEBUG] - fit_round 66 received 10 results and 0 failures
+[2024-05-12 20:26:17,993][flwr][INFO] - fit progress: (66, 38.05720925331116, {'accuracy': 0.8585}, 4003.9003041908145)
+[2024-05-12 20:26:17,993][flwr][DEBUG] - evaluate_round 66: strategy sampled 1 clients (out of 50)
+[2024-05-12 20:26:21,994][flwr][DEBUG] - evaluate_round 66 received 1 results and 0 failures
+[2024-05-12 20:26:21,994][flwr][DEBUG] - fit_round 67: strategy sampled 10 clients (out of 50)

@@ -1,0 +1,25 @@
+[2024-05-13 17:52:36,034][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-13 17:52:38,527][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 36644511744.0, 'node:__internal_head__': 1.0, 'node:172.17.34.49': 1.0, 'CPU': 20.0, 'object_store_memory': 18322255872.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-13 17:52:38,528][flwr][INFO] - Initializing global parameters
+[2024-05-13 17:52:38,528][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-13 17:52:41,149][flwr][INFO] - Received initial parameters from one random client
+[2024-05-13 17:52:41,149][flwr][INFO] - Evaluating initial parameters
+[2024-05-13 17:52:44,561][flwr][INFO] - initial parameters (loss, other metrics): 190.36552739143372, {'accuracy': 0.1171}
+[2024-05-13 17:52:44,562][flwr][INFO] - FL starting
+[2024-05-13 17:52:44,562][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-13 17:53:35,101][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-13 17:53:37,631][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-13 17:53:39,571][flwr][INFO] - fit progress: (1, 297.8617260456085, {'accuracy': 0.0285}, 55.009212631732225)
+[2024-05-13 17:53:39,571][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-13 17:53:43,427][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-13 17:53:43,428][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-13 17:53:43,428][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-13 17:54:30,305][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=770046, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: expected an indented block (client.py, line 97)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 97
+    train_lf(self.model, self.trainloader, optim, epochs, self.device)
+    ^
+IndentationError: expected an indented block
+[2024-05-13 17:54:30,306][flwr][DEBUG] - fit_round 2 received 9 results and 1 failures

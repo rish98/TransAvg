@@ -1,0 +1,842 @@
+[2024-05-05 15:23:41,951][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-05 15:23:44,353][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:172.17.34.49': 1.0, 'node:__internal_head__': 1.0, 'CPU': 20.0, 'object_store_memory': 19335685324.0, 'memory': 38671370651.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-05 15:23:44,354][flwr][INFO] - Initializing global parameters
+[2024-05-05 15:23:44,354][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-05 15:23:46,729][flwr][INFO] - Received initial parameters from one random client
+[2024-05-05 15:23:46,729][flwr][INFO] - Evaluating initial parameters
+[2024-05-05 15:23:51,734][flwr][INFO] - initial parameters (loss, other metrics): 3955.6340255737305, {'accuracy': 0.0915}
+[2024-05-05 15:23:51,734][flwr][INFO] - FL starting
+[2024-05-05 15:23:51,734][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:24:15,915][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-05 15:24:16,415][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-05 15:24:18,822][flwr][INFO] - fit progress: (1, 180.76628994941711, {'accuracy': 0.1347}, 27.087905701249838)
+[2024-05-05 15:24:18,822][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:24:32,503][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-05 15:24:32,503][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-05 15:24:32,504][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:24:59,070][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-05 15:25:01,954][flwr][INFO] - fit progress: (2, 171.4777467250824, {'accuracy': 0.1861}, 70.21970831230283)
+[2024-05-05 15:25:01,954][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:25:15,618][flwr][DEBUG] - evaluate_round 2 received 5 results and 0 failures
+[2024-05-05 15:25:15,618][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:25:42,294][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-05 15:25:45,200][flwr][INFO] - fit progress: (3, 169.62784278392792, {'accuracy': 0.1967}, 113.46576128527522)
+[2024-05-05 15:25:45,200][flwr][DEBUG] - evaluate_round 3: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:25:59,138][flwr][DEBUG] - evaluate_round 3 received 5 results and 0 failures
+[2024-05-05 15:25:59,138][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:26:25,237][flwr][DEBUG] - fit_round 4 received 10 results and 0 failures
+[2024-05-05 15:26:28,122][flwr][INFO] - fit progress: (4, 162.41407537460327, {'accuracy': 0.2124}, 156.3882464915514)
+[2024-05-05 15:26:28,122][flwr][DEBUG] - evaluate_round 4: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:26:41,716][flwr][DEBUG] - evaluate_round 4 received 5 results and 0 failures
+[2024-05-05 15:26:41,717][flwr][DEBUG] - fit_round 5: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:27:06,660][flwr][DEBUG] - fit_round 5 received 10 results and 0 failures
+[2024-05-05 15:27:09,547][flwr][INFO] - fit progress: (5, 159.99213528633118, {'accuracy': 0.2426}, 197.81306997314095)
+[2024-05-05 15:27:09,547][flwr][DEBUG] - evaluate_round 5: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:27:23,371][flwr][DEBUG] - evaluate_round 5 received 5 results and 0 failures
+[2024-05-05 15:27:23,372][flwr][DEBUG] - fit_round 6: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:27:48,194][flwr][DEBUG] - fit_round 6 received 10 results and 0 failures
+[2024-05-05 15:27:51,079][flwr][INFO] - fit progress: (6, 149.43759143352509, {'accuracy': 0.3119}, 239.34498880803585)
+[2024-05-05 15:27:51,079][flwr][DEBUG] - evaluate_round 6: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:28:04,649][flwr][DEBUG] - evaluate_round 6 received 5 results and 0 failures
+[2024-05-05 15:28:04,650][flwr][DEBUG] - fit_round 7: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:28:30,680][flwr][DEBUG] - fit_round 7 received 10 results and 0 failures
+[2024-05-05 15:28:33,544][flwr][INFO] - fit progress: (7, 143.72976636886597, {'accuracy': 0.3471}, 281.8103582151234)
+[2024-05-05 15:28:33,544][flwr][DEBUG] - evaluate_round 7: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:28:47,082][flwr][DEBUG] - evaluate_round 7 received 5 results and 0 failures
+[2024-05-05 15:28:47,082][flwr][DEBUG] - fit_round 8: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:29:11,199][flwr][DEBUG] - fit_round 8 received 10 results and 0 failures
+[2024-05-05 15:29:14,046][flwr][INFO] - fit progress: (8, 139.98495876789093, {'accuracy': 0.3584}, 322.3119718953967)
+[2024-05-05 15:29:14,046][flwr][DEBUG] - evaluate_round 8: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:29:27,781][flwr][DEBUG] - evaluate_round 8 received 5 results and 0 failures
+[2024-05-05 15:29:27,782][flwr][DEBUG] - fit_round 9: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:29:53,731][flwr][DEBUG] - fit_round 9 received 10 results and 0 failures
+[2024-05-05 15:29:56,622][flwr][INFO] - fit progress: (9, 135.52586674690247, {'accuracy': 0.3759}, 364.8884726576507)
+[2024-05-05 15:29:56,623][flwr][DEBUG] - evaluate_round 9: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:30:10,551][flwr][DEBUG] - evaluate_round 9 received 5 results and 0 failures
+[2024-05-05 15:30:10,552][flwr][DEBUG] - fit_round 10: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:30:35,126][flwr][DEBUG] - fit_round 10 received 10 results and 0 failures
+[2024-05-05 15:30:37,982][flwr][INFO] - fit progress: (10, 136.20426952838898, {'accuracy': 0.3737}, 406.247911516577)
+[2024-05-05 15:30:37,982][flwr][DEBUG] - evaluate_round 10: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:30:51,791][flwr][DEBUG] - evaluate_round 10 received 5 results and 0 failures
+[2024-05-05 15:30:51,791][flwr][DEBUG] - fit_round 11: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:31:16,657][flwr][DEBUG] - fit_round 11 received 10 results and 0 failures
+[2024-05-05 15:31:19,536][flwr][INFO] - fit progress: (11, 132.9101928472519, {'accuracy': 0.3883}, 447.80209796503186)
+[2024-05-05 15:31:19,536][flwr][DEBUG] - evaluate_round 11: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:31:33,266][flwr][DEBUG] - evaluate_round 11 received 5 results and 0 failures
+[2024-05-05 15:31:33,267][flwr][DEBUG] - fit_round 12: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:31:59,384][flwr][DEBUG] - fit_round 12 received 10 results and 0 failures
+[2024-05-05 15:32:02,252][flwr][INFO] - fit progress: (12, 129.81003630161285, {'accuracy': 0.4199}, 490.518177036196)
+[2024-05-05 15:32:02,252][flwr][DEBUG] - evaluate_round 12: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:32:16,161][flwr][DEBUG] - evaluate_round 12 received 5 results and 0 failures
+[2024-05-05 15:32:16,162][flwr][DEBUG] - fit_round 13: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:32:43,165][flwr][DEBUG] - fit_round 13 received 10 results and 0 failures
+[2024-05-05 15:32:46,000][flwr][INFO] - fit progress: (13, 125.59935021400452, {'accuracy': 0.4393}, 534.2665718048811)
+[2024-05-05 15:32:46,001][flwr][DEBUG] - evaluate_round 13: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:32:59,721][flwr][DEBUG] - evaluate_round 13 received 5 results and 0 failures
+[2024-05-05 15:32:59,722][flwr][DEBUG] - fit_round 14: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:33:24,983][flwr][DEBUG] - fit_round 14 received 10 results and 0 failures
+[2024-05-05 15:33:27,850][flwr][INFO] - fit progress: (14, 125.64716875553131, {'accuracy': 0.441}, 576.116352070123)
+[2024-05-05 15:33:27,850][flwr][DEBUG] - evaluate_round 14: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:33:41,582][flwr][DEBUG] - evaluate_round 14 received 5 results and 0 failures
+[2024-05-05 15:33:41,583][flwr][DEBUG] - fit_round 15: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:34:05,564][flwr][DEBUG] - fit_round 15 received 10 results and 0 failures
+[2024-05-05 15:34:08,432][flwr][INFO] - fit progress: (15, 123.33527982234955, {'accuracy': 0.4527}, 616.6981592662632)
+[2024-05-05 15:34:08,432][flwr][DEBUG] - evaluate_round 15: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:34:22,561][flwr][DEBUG] - evaluate_round 15 received 5 results and 0 failures
+[2024-05-05 15:34:22,561][flwr][DEBUG] - fit_round 16: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:34:49,825][flwr][DEBUG] - fit_round 16 received 10 results and 0 failures
+[2024-05-05 15:34:52,686][flwr][INFO] - fit progress: (16, 120.47498631477356, {'accuracy': 0.4622}, 660.9517255276442)
+[2024-05-05 15:34:52,686][flwr][DEBUG] - evaluate_round 16: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:35:06,710][flwr][DEBUG] - evaluate_round 16 received 5 results and 0 failures
+[2024-05-05 15:35:06,711][flwr][DEBUG] - fit_round 17: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:35:32,238][flwr][DEBUG] - fit_round 17 received 10 results and 0 failures
+[2024-05-05 15:35:35,113][flwr][INFO] - fit progress: (17, 118.97252607345581, {'accuracy': 0.4782}, 703.3793668933213)
+[2024-05-05 15:35:35,113][flwr][DEBUG] - evaluate_round 17: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:35:49,285][flwr][DEBUG] - evaluate_round 17 received 5 results and 0 failures
+[2024-05-05 15:35:49,285][flwr][DEBUG] - fit_round 18: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:36:14,224][flwr][DEBUG] - fit_round 18 received 10 results and 0 failures
+[2024-05-05 15:36:17,122][flwr][INFO] - fit progress: (18, 117.72285807132721, {'accuracy': 0.4825}, 745.3884452208877)
+[2024-05-05 15:36:17,123][flwr][DEBUG] - evaluate_round 18: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:36:31,230][flwr][DEBUG] - evaluate_round 18 received 5 results and 0 failures
+[2024-05-05 15:36:31,231][flwr][DEBUG] - fit_round 19: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:36:55,737][flwr][DEBUG] - fit_round 19 received 10 results and 0 failures
+[2024-05-05 15:36:58,586][flwr][INFO] - fit progress: (19, 115.57440459728241, {'accuracy': 0.4933}, 786.8521150834858)
+[2024-05-05 15:36:58,586][flwr][DEBUG] - evaluate_round 19: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:37:12,080][flwr][DEBUG] - evaluate_round 19 received 5 results and 0 failures
+[2024-05-05 15:37:12,081][flwr][DEBUG] - fit_round 20: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:37:38,572][flwr][DEBUG] - fit_round 20 received 10 results and 0 failures
+[2024-05-05 15:37:41,438][flwr][INFO] - fit progress: (20, 114.15225028991699, {'accuracy': 0.4993}, 829.7038634568453)
+[2024-05-05 15:37:41,438][flwr][DEBUG] - evaluate_round 20: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:37:54,834][flwr][DEBUG] - evaluate_round 20 received 5 results and 0 failures
+[2024-05-05 15:37:54,834][flwr][DEBUG] - fit_round 21: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:38:20,001][flwr][DEBUG] - fit_round 21 received 10 results and 0 failures
+[2024-05-05 15:38:22,895][flwr][INFO] - fit progress: (21, 111.55840301513672, {'accuracy': 0.513}, 871.1611764393747)
+[2024-05-05 15:38:22,895][flwr][DEBUG] - evaluate_round 21: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:38:37,188][flwr][DEBUG] - evaluate_round 21 received 5 results and 0 failures
+[2024-05-05 15:38:37,189][flwr][DEBUG] - fit_round 22: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:39:04,742][flwr][DEBUG] - fit_round 22 received 10 results and 0 failures
+[2024-05-05 15:39:07,590][flwr][INFO] - fit progress: (22, 111.27656936645508, {'accuracy': 0.5216}, 915.8562599718571)
+[2024-05-05 15:39:07,590][flwr][DEBUG] - evaluate_round 22: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:39:21,762][flwr][DEBUG] - evaluate_round 22 received 5 results and 0 failures
+[2024-05-05 15:39:21,763][flwr][DEBUG] - fit_round 23: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:39:48,676][flwr][DEBUG] - fit_round 23 received 10 results and 0 failures
+[2024-05-05 15:39:51,555][flwr][INFO] - fit progress: (23, 109.3854911327362, {'accuracy': 0.5295}, 959.820709656924)
+[2024-05-05 15:39:51,555][flwr][DEBUG] - evaluate_round 23: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:40:05,201][flwr][DEBUG] - evaluate_round 23 received 5 results and 0 failures
+[2024-05-05 15:40:05,201][flwr][DEBUG] - fit_round 24: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:40:31,695][flwr][DEBUG] - fit_round 24 received 10 results and 0 failures
+[2024-05-05 15:40:34,582][flwr][INFO] - fit progress: (24, 107.15914523601532, {'accuracy': 0.5458}, 1002.8477640748024)
+[2024-05-05 15:40:34,582][flwr][DEBUG] - evaluate_round 24: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:40:48,430][flwr][DEBUG] - evaluate_round 24 received 5 results and 0 failures
+[2024-05-05 15:40:48,431][flwr][DEBUG] - fit_round 25: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:41:13,693][flwr][DEBUG] - fit_round 25 received 10 results and 0 failures
+[2024-05-05 15:41:16,558][flwr][INFO] - fit progress: (25, 107.23895192146301, {'accuracy': 0.5471}, 1044.8240862824023)
+[2024-05-05 15:41:16,558][flwr][DEBUG] - evaluate_round 25: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:41:30,489][flwr][DEBUG] - evaluate_round 25 received 5 results and 0 failures
+[2024-05-05 15:41:30,489][flwr][DEBUG] - fit_round 26: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:41:57,008][flwr][DEBUG] - fit_round 26 received 10 results and 0 failures
+[2024-05-05 15:41:59,865][flwr][INFO] - fit progress: (26, 105.78634548187256, {'accuracy': 0.5542}, 1088.131135892123)
+[2024-05-05 15:41:59,865][flwr][DEBUG] - evaluate_round 26: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:42:13,756][flwr][DEBUG] - evaluate_round 26 received 5 results and 0 failures
+[2024-05-05 15:42:13,757][flwr][DEBUG] - fit_round 27: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:42:36,665][flwr][DEBUG] - fit_round 27 received 10 results and 0 failures
+[2024-05-05 15:42:39,510][flwr][INFO] - fit progress: (27, 101.9651347398758, {'accuracy': 0.5662}, 1127.7764026336372)
+[2024-05-05 15:42:39,511][flwr][DEBUG] - evaluate_round 27: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:42:52,867][flwr][DEBUG] - evaluate_round 27 received 5 results and 0 failures
+[2024-05-05 15:42:52,868][flwr][DEBUG] - fit_round 28: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:43:18,684][flwr][DEBUG] - fit_round 28 received 10 results and 0 failures
+[2024-05-05 15:43:21,537][flwr][INFO] - fit progress: (28, 101.39188039302826, {'accuracy': 0.5692}, 1169.802677050233)
+[2024-05-05 15:43:21,537][flwr][DEBUG] - evaluate_round 28: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:43:35,425][flwr][DEBUG] - evaluate_round 28 received 5 results and 0 failures
+[2024-05-05 15:43:35,425][flwr][DEBUG] - fit_round 29: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:44:00,055][flwr][DEBUG] - fit_round 29 received 10 results and 0 failures
+[2024-05-05 15:44:02,912][flwr][INFO] - fit progress: (29, 103.28046417236328, {'accuracy': 0.57}, 1211.1785284988582)
+[2024-05-05 15:44:02,913][flwr][DEBUG] - evaluate_round 29: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:44:16,615][flwr][DEBUG] - evaluate_round 29 received 5 results and 0 failures
+[2024-05-05 15:44:16,615][flwr][DEBUG] - fit_round 30: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:44:43,622][flwr][DEBUG] - fit_round 30 received 10 results and 0 failures
+[2024-05-05 15:44:46,499][flwr][INFO] - fit progress: (30, 100.34211277961731, {'accuracy': 0.5848}, 1254.7647583186626)
+[2024-05-05 15:44:46,499][flwr][DEBUG] - evaluate_round 30: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:45:00,278][flwr][DEBUG] - evaluate_round 30 received 5 results and 0 failures
+[2024-05-05 15:45:00,278][flwr][DEBUG] - fit_round 31: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:45:26,960][flwr][DEBUG] - fit_round 31 received 10 results and 0 failures
+[2024-05-05 15:45:29,848][flwr][INFO] - fit progress: (31, 98.6609377861023, {'accuracy': 0.5862}, 1298.113671246916)
+[2024-05-05 15:45:29,848][flwr][DEBUG] - evaluate_round 31: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:45:43,647][flwr][DEBUG] - evaluate_round 31 received 5 results and 0 failures
+[2024-05-05 15:45:43,647][flwr][DEBUG] - fit_round 32: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:46:08,015][flwr][DEBUG] - fit_round 32 received 10 results and 0 failures
+[2024-05-05 15:46:10,890][flwr][INFO] - fit progress: (32, 96.76311838626862, {'accuracy': 0.5942}, 1339.1562311053276)
+[2024-05-05 15:46:10,890][flwr][DEBUG] - evaluate_round 32: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:46:24,529][flwr][DEBUG] - evaluate_round 32 received 5 results and 0 failures
+[2024-05-05 15:46:24,530][flwr][DEBUG] - fit_round 33: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:46:51,252][flwr][DEBUG] - fit_round 33 received 10 results and 0 failures
+[2024-05-05 15:46:54,123][flwr][INFO] - fit progress: (33, 97.65873336791992, {'accuracy': 0.5957}, 1382.3895164839923)
+[2024-05-05 15:46:54,124][flwr][DEBUG] - evaluate_round 33: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:47:08,086][flwr][DEBUG] - evaluate_round 33 received 5 results and 0 failures
+[2024-05-05 15:47:08,086][flwr][DEBUG] - fit_round 34: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:47:34,446][flwr][DEBUG] - fit_round 34 received 10 results and 0 failures
+[2024-05-05 15:47:37,340][flwr][INFO] - fit progress: (34, 95.57300686836243, {'accuracy': 0.6082}, 1425.6062089055777)
+[2024-05-05 15:47:37,340][flwr][DEBUG] - evaluate_round 34: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:47:51,329][flwr][DEBUG] - evaluate_round 34 received 5 results and 0 failures
+[2024-05-05 15:47:51,329][flwr][DEBUG] - fit_round 35: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:48:17,440][flwr][DEBUG] - fit_round 35 received 10 results and 0 failures
+[2024-05-05 15:48:20,334][flwr][INFO] - fit progress: (35, 95.6081975698471, {'accuracy': 0.6135}, 1468.6000093743205)
+[2024-05-05 15:48:20,334][flwr][DEBUG] - evaluate_round 35: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:48:34,004][flwr][DEBUG] - evaluate_round 35 received 5 results and 0 failures
+[2024-05-05 15:48:34,005][flwr][DEBUG] - fit_round 36: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:48:48,222][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074686, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:48,287][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074693, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:49,514][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074790, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:49,529][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074799, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:50,167][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074896, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:50,268][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3074903, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:50,269][flwr][DEBUG] - fit_round 36 received 4 results and 6 failures
+[2024-05-05 15:48:52,882][flwr][INFO] - fit progress: (36, 94.29767364263535, {'accuracy': 0.6085}, 1501.1483696214855)
+[2024-05-05 15:48:52,882][flwr][DEBUG] - evaluate_round 36: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:48:58,532][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3075161, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:58,546][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3075163, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:58,579][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3075164, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:58,637][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3075165, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:59,694][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3075350, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:48:59,695][flwr][DEBUG] - evaluate_round 36 received 0 results and 5 failures
+[2024-05-05 15:48:59,695][flwr][DEBUG] - fit_round 37: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:49:09,409][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075566, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:09,689][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075612, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:09,751][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075614, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:09,815][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075615, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:10,615][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075755, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:10,871][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075806, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:10,953][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075813, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:11,037][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075820, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:11,746][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3075995, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:12,049][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076046, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:12,050][flwr][DEBUG] - fit_round 37 received 0 results and 10 failures
+[2024-05-05 15:49:14,531][flwr][INFO] - fit progress: (37, 94.29767364263535, {'accuracy': 0.6085}, 1522.797056119889)
+[2024-05-05 15:49:14,531][flwr][DEBUG] - evaluate_round 37: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:49:20,065][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3076289, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:20,090][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3076286, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:20,132][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3076287, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:20,219][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3076292, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:21,150][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3076475, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:21,151][flwr][DEBUG] - evaluate_round 37 received 0 results and 5 failures
+[2024-05-05 15:49:21,152][flwr][DEBUG] - fit_round 38: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:49:30,657][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076784, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:30,776][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076787, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:30,873][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076832, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:30,941][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076834, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:31,846][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076973, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:31,969][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076980, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:32,082][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3076988, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:32,093][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3077038, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:32,982][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3077227, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:33,091][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3077234, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:33,092][flwr][DEBUG] - fit_round 38 received 0 results and 10 failures
+[2024-05-05 15:49:35,584][flwr][INFO] - fit progress: (38, 94.29767364263535, {'accuracy': 0.6085}, 1543.8500852286816)
+[2024-05-05 15:49:35,584][flwr][DEBUG] - evaluate_round 38: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:49:41,209][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3077589, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:41,225][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3077591, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:41,245][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3077588, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:41,316][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3077592, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:42,343][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3077777, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:42,343][flwr][DEBUG] - evaluate_round 38 received 0 results and 5 failures
+[2024-05-05 15:49:42,344][flwr][DEBUG] - fit_round 39: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:49:50,699][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078175, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:52,025][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078229, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:52,029][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078227, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:52,040][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078231, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:52,047][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078230, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:53,161][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078416, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:53,171][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078434, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:53,216][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078422, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:53,241][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078428, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:54,267][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3078687, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:49:54,268][flwr][DEBUG] - fit_round 39 received 0 results and 10 failures
+[2024-05-05 15:49:56,759][flwr][INFO] - fit progress: (39, 94.29767364263535, {'accuracy': 0.6085}, 1565.02558452636)
+[2024-05-05 15:49:56,760][flwr][DEBUG] - evaluate_round 39: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:50:02,339][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3079076, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:02,358][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3079077, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:02,422][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3079082, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:02,516][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3079081, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:03,479][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3079324, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:03,480][flwr][DEBUG] - evaluate_round 39 received 0 results and 5 failures
+[2024-05-05 15:50:03,481][flwr][DEBUG] - fit_round 40: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:50:15,676][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079746, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:15,719][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079748, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:15,819][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079773, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:15,821][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079749, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:16,909][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079939, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:16,921][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079945, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:16,982][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079959, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:17,043][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3079958, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:18,077][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3080175, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:18,117][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=3080181, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:18,118][flwr][DEBUG] - fit_round 40 received 0 results and 10 failures
+[2024-05-05 15:50:20,578][flwr][INFO] - fit progress: (40, 94.29767364263535, {'accuracy': 0.6085}, 1588.8443927653134)
+[2024-05-05 15:50:20,579][flwr][DEBUG] - evaluate_round 40: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:50:26,679][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3080412, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:26,712][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3080414, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:26,736][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3080415, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:26,771][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3080416, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:27,813][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=3080602, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 95)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 95
+    print(self.model.features.)
+                              ^
+SyntaxError: invalid syntax
+[2024-05-05 15:50:27,814][flwr][DEBUG] - evaluate_round 40 received 0 results and 5 failures
+[2024-05-05 15:50:27,814][flwr][DEBUG] - fit_round 41: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:50:52,803][flwr][DEBUG] - fit_round 41 received 10 results and 0 failures
+[2024-05-05 15:50:55,666][flwr][INFO] - fit progress: (41, 91.62602883577347, {'accuracy': 0.6201}, 1623.9319492205977)
+[2024-05-05 15:50:55,666][flwr][DEBUG] - evaluate_round 41: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:51:09,695][flwr][DEBUG] - evaluate_round 41 received 5 results and 0 failures
+[2024-05-05 15:51:09,696][flwr][DEBUG] - fit_round 42: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:51:34,775][flwr][DEBUG] - fit_round 42 received 10 results and 0 failures
+[2024-05-05 15:51:37,643][flwr][INFO] - fit progress: (42, 90.68196028470993, {'accuracy': 0.6273}, 1665.9090089909732)
+[2024-05-05 15:51:37,643][flwr][DEBUG] - evaluate_round 42: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:51:51,653][flwr][DEBUG] - evaluate_round 42 received 5 results and 0 failures
+[2024-05-05 15:51:51,653][flwr][DEBUG] - fit_round 43: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:52:18,203][flwr][DEBUG] - fit_round 43 received 10 results and 0 failures
+[2024-05-05 15:52:21,105][flwr][INFO] - fit progress: (43, 92.94777190685272, {'accuracy': 0.6279}, 1709.3709118664265)
+[2024-05-05 15:52:21,105][flwr][DEBUG] - evaluate_round 43: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:52:34,743][flwr][DEBUG] - evaluate_round 43 received 5 results and 0 failures
+[2024-05-05 15:52:34,744][flwr][DEBUG] - fit_round 44: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:53:01,216][flwr][DEBUG] - fit_round 44 received 10 results and 0 failures
+[2024-05-05 15:53:04,098][flwr][INFO] - fit progress: (44, 89.7482174038887, {'accuracy': 0.6334}, 1752.3639764375985)
+[2024-05-05 15:53:04,098][flwr][DEBUG] - evaluate_round 44: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:53:17,890][flwr][DEBUG] - evaluate_round 44 received 5 results and 0 failures
+[2024-05-05 15:53:17,891][flwr][DEBUG] - fit_round 45: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:53:43,096][flwr][DEBUG] - fit_round 45 received 10 results and 0 failures
+[2024-05-05 15:53:45,930][flwr][INFO] - fit progress: (45, 93.18941140174866, {'accuracy': 0.6294}, 1794.1961084641516)
+[2024-05-05 15:53:45,930][flwr][DEBUG] - evaluate_round 45: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:54:00,018][flwr][DEBUG] - evaluate_round 45 received 5 results and 0 failures
+[2024-05-05 15:54:00,018][flwr][DEBUG] - fit_round 46: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:54:27,131][flwr][DEBUG] - fit_round 46 received 10 results and 0 failures
+[2024-05-05 15:54:30,007][flwr][INFO] - fit progress: (46, 91.63756489753723, {'accuracy': 0.6338}, 1838.2729542925954)
+[2024-05-05 15:54:30,007][flwr][DEBUG] - evaluate_round 46: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:54:44,401][flwr][DEBUG] - evaluate_round 46 received 5 results and 0 failures
+[2024-05-05 15:54:44,402][flwr][DEBUG] - fit_round 47: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:55:08,157][flwr][DEBUG] - fit_round 47 received 10 results and 0 failures
+[2024-05-05 15:55:11,003][flwr][INFO] - fit progress: (47, 90.07123166322708, {'accuracy': 0.6411}, 1879.2691192440689)
+[2024-05-05 15:55:11,003][flwr][DEBUG] - evaluate_round 47: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:55:24,908][flwr][DEBUG] - evaluate_round 47 received 5 results and 0 failures
+[2024-05-05 15:55:24,909][flwr][DEBUG] - fit_round 48: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:55:51,309][flwr][DEBUG] - fit_round 48 received 10 results and 0 failures
+[2024-05-05 15:55:54,179][flwr][INFO] - fit progress: (48, 87.11061370372772, {'accuracy': 0.6451}, 1922.445066485554)
+[2024-05-05 15:55:54,179][flwr][DEBUG] - evaluate_round 48: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:56:08,244][flwr][DEBUG] - evaluate_round 48 received 5 results and 0 failures
+[2024-05-05 15:56:08,244][flwr][DEBUG] - fit_round 49: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:56:34,408][flwr][DEBUG] - fit_round 49 received 10 results and 0 failures
+[2024-05-05 15:56:37,291][flwr][INFO] - fit progress: (49, 87.2941752076149, {'accuracy': 0.6549}, 1965.556957181543)
+[2024-05-05 15:56:37,291][flwr][DEBUG] - evaluate_round 49: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:57:10,966][flwr][DEBUG] - evaluate_round 49 received 5 results and 0 failures
+[2024-05-05 15:57:10,967][flwr][DEBUG] - fit_round 50: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:57:38,581][flwr][DEBUG] - fit_round 50 received 10 results and 0 failures
+[2024-05-05 15:57:41,429][flwr][INFO] - fit progress: (50, 86.63517659902573, {'accuracy': 0.6547}, 2029.6951854750514)
+[2024-05-05 15:57:41,429][flwr][DEBUG] - evaluate_round 50: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:57:55,466][flwr][DEBUG] - evaluate_round 50 received 5 results and 0 failures
+[2024-05-05 15:57:55,467][flwr][DEBUG] - fit_round 51: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:58:19,217][flwr][DEBUG] - fit_round 51 received 10 results and 0 failures
+[2024-05-05 15:58:22,095][flwr][INFO] - fit progress: (51, 89.34609961509705, {'accuracy': 0.6507}, 2070.360807955265)
+[2024-05-05 15:58:22,095][flwr][DEBUG] - evaluate_round 51: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:58:36,493][flwr][DEBUG] - evaluate_round 51 received 5 results and 0 failures
+[2024-05-05 15:58:36,494][flwr][DEBUG] - fit_round 52: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:59:03,142][flwr][DEBUG] - fit_round 52 received 10 results and 0 failures
+[2024-05-05 15:59:06,032][flwr][INFO] - fit progress: (52, 84.34739977121353, {'accuracy': 0.666}, 2114.2979896627367)
+[2024-05-05 15:59:06,032][flwr][DEBUG] - evaluate_round 52: strategy sampled 5 clients (out of 50)
+[2024-05-05 15:59:19,798][flwr][DEBUG] - evaluate_round 52 received 5 results and 0 failures
+[2024-05-05 15:59:19,799][flwr][DEBUG] - fit_round 53: strategy sampled 10 clients (out of 50)
+[2024-05-05 15:59:46,372][flwr][DEBUG] - fit_round 53 received 10 results and 0 failures
+[2024-05-05 15:59:49,239][flwr][INFO] - fit progress: (53, 84.37757778167725, {'accuracy': 0.6594}, 2157.505249813199)
+[2024-05-05 15:59:49,239][flwr][DEBUG] - evaluate_round 53: strategy sampled 5 clients (out of 50)

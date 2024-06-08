@@ -1,0 +1,417 @@
+[2024-05-06 15:49:13,717][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-06 15:49:16,259][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 20.0, 'object_store_memory': 18282794188.0, 'node:172.17.34.49': 1.0, 'GPU': 4.0, 'accelerator_type:G': 1.0, 'memory': 36565588379.0, 'node:__internal_head__': 1.0}
+[2024-05-06 15:49:16,259][flwr][INFO] - Initializing global parameters
+[2024-05-06 15:49:16,260][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-06 15:49:18,820][flwr][INFO] - Received initial parameters from one random client
+[2024-05-06 15:49:18,820][flwr][INFO] - Evaluating initial parameters
+[2024-05-06 15:49:22,287][flwr][INFO] - initial parameters (loss, other metrics): 190.393714427948, {'accuracy': 0.1067}
+[2024-05-06 15:49:22,288][flwr][INFO] - FL starting
+[2024-05-06 15:49:22,288][flwr][DEBUG] - fit_round 1: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:49:37,810][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=86193, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 135.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:49:39,978][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=86466, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 53, in train
+    net.to(device)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 989, in to
+    return self._apply(convert)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 641, in _apply
+    module._apply(fn)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 664, in _apply
+    param_applied = fn(param)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 987, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+[2024-05-06 15:49:45,174][flwr][DEBUG] - fit_round 1 received 7 results and 2 failures
+[2024-05-06 15:49:47,044][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-06 15:49:49,011][flwr][INFO] - fit progress: (1, 139.50571846961975, {'accuracy': 0.6248}, 26.723557114601135)
+[2024-05-06 15:49:49,011][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:50:01,628][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-06 15:50:01,628][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-06 15:50:01,628][flwr][DEBUG] - fit_round 2: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:50:17,461][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=88430, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:50:27,788][flwr][DEBUG] - fit_round 2 received 8 results and 1 failures
+[2024-05-06 15:50:31,907][flwr][INFO] - fit progress: (2, 311.07650339603424, {'accuracy': 0.5978}, 69.61944779008627)
+[2024-05-06 15:50:31,907][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:50:44,179][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=89916, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:50:44,180][flwr][DEBUG] - evaluate_round 2 received 4 results and 1 failures
+[2024-05-06 15:50:44,181][flwr][DEBUG] - fit_round 3: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:50:59,767][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=90731, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:51:10,142][flwr][DEBUG] - fit_round 3 received 8 results and 1 failures
+[2024-05-06 15:51:14,285][flwr][INFO] - fit progress: (3, 281.6771328449249, {'accuracy': 0.7628}, 111.99743925035)
+[2024-05-06 15:51:14,285][flwr][DEBUG] - evaluate_round 3: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:51:26,685][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=92216, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:51:26,686][flwr][DEBUG] - evaluate_round 3 received 4 results and 1 failures
+[2024-05-06 15:51:26,687][flwr][DEBUG] - fit_round 4: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:51:42,165][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=93037, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:51:52,522][flwr][DEBUG] - fit_round 4 received 8 results and 1 failures
+[2024-05-06 15:51:56,665][flwr][INFO] - fit progress: (4, 271.7273962497711, {'accuracy': 0.8261}, 154.37775136902928)
+[2024-05-06 15:51:56,666][flwr][DEBUG] - evaluate_round 4: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:52:09,173][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=94508, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:52:09,174][flwr][DEBUG] - evaluate_round 4 received 4 results and 1 failures
+[2024-05-06 15:52:09,174][flwr][DEBUG] - fit_round 5: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:52:24,886][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=95339, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:52:35,299][flwr][DEBUG] - fit_round 5 received 8 results and 1 failures
+[2024-05-06 15:52:39,454][flwr][INFO] - fit progress: (5, 195.13763960637152, {'accuracy': 0.866}, 197.16625836491585)
+[2024-05-06 15:52:39,454][flwr][DEBUG] - evaluate_round 5: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:52:51,413][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=96824, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:52:51,414][flwr][DEBUG] - evaluate_round 5 received 4 results and 1 failures
+[2024-05-06 15:52:51,415][flwr][DEBUG] - fit_round 6: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:53:06,788][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=97643, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:53:17,220][flwr][DEBUG] - fit_round 6 received 8 results and 1 failures
+[2024-05-06 15:53:21,396][flwr][INFO] - fit progress: (6, 191.45456850528717, {'accuracy': 0.8805}, 239.10869383439422)
+[2024-05-06 15:53:21,397][flwr][DEBUG] - evaluate_round 6: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:53:34,156][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=99121, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:53:34,157][flwr][DEBUG] - evaluate_round 6 received 4 results and 1 failures
+[2024-05-06 15:53:34,158][flwr][DEBUG] - fit_round 7: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:53:49,784][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=99942, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:54:00,189][flwr][DEBUG] - fit_round 7 received 8 results and 1 failures
+[2024-05-06 15:54:04,360][flwr][INFO] - fit progress: (7, 202.33142822934315, {'accuracy': 0.8764}, 282.07201586663723)
+[2024-05-06 15:54:04,360][flwr][DEBUG] - evaluate_round 7: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:54:17,120][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=101429, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:54:17,121][flwr][DEBUG] - evaluate_round 7 received 4 results and 1 failures
+[2024-05-06 15:54:17,121][flwr][DEBUG] - fit_round 8: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:54:32,237][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=102245, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:54:42,569][flwr][DEBUG] - fit_round 8 received 8 results and 1 failures
+[2024-05-06 15:54:46,701][flwr][INFO] - fit progress: (8, 196.6863355152309, {'accuracy': 0.8682}, 324.4131247512996)
+[2024-05-06 15:54:46,701][flwr][DEBUG] - evaluate_round 8: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:54:58,972][flwr][ERROR] - [36mray::launch_and_evaluate()[39m (pid=103723, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 160, in launch_and_evaluate
+    return maybe_call_evaluate(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 205, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 321, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 173, in evaluate
+    loss, accuracy = test(self.model, self.valloader, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 75, in test
+    outputs = net(images)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 35, in forward
+    x = self.fc2(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 109, in forward
+    weight_b=binarized(self.weight)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 596.18 MiB already allocated; 14.56 MiB free; 600.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:54:58,973][flwr][DEBUG] - evaluate_round 8 received 4 results and 1 failures
+[2024-05-06 15:54:58,974][flwr][DEBUG] - fit_round 9: strategy sampled 9 clients (out of 50)

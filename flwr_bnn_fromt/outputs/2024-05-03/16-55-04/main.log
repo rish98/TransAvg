@@ -1,0 +1,49 @@
+[2024-05-03 16:55:05,488][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-03 16:55:07,843][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 38708477952.0, 'CPU': 20.0, 'node:172.17.34.49': 1.0, 'accelerator_type:G': 1.0, 'GPU': 4.0, 'node:__internal_head__': 1.0, 'object_store_memory': 19354238976.0}
+[2024-05-03 16:55:07,844][flwr][INFO] - Initializing global parameters
+[2024-05-03 16:55:07,844][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-03 16:55:10,551][flwr][INFO] - Received initial parameters from one random client
+[2024-05-03 16:55:10,551][flwr][INFO] - Evaluating initial parameters
+[2024-05-03 16:55:18,313][flwr][INFO] - initial parameters (loss, other metrics): 4300.87678527832, {'accuracy': 0.1051}
+[2024-05-03 16:55:18,313][flwr][INFO] - FL starting
+[2024-05-03 16:55:18,313][flwr][DEBUG] - fit_round 1: strategy sampled 2 clients (out of 50)
+[2024-05-03 16:55:26,939][flwr][DEBUG] - fit_round 1 received 2 results and 0 failures
+[2024-05-03 16:55:27,214][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-03 16:55:32,370][flwr][INFO] - fit progress: (1, 175.2024108171463, {'accuracy': 0.1772}, 14.05659057945013)
+[2024-05-03 16:55:32,370][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-03 16:55:47,198][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-03 16:55:47,198][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-03 16:55:47,198][flwr][DEBUG] - fit_round 2: strategy sampled 2 clients (out of 50)
+[2024-05-03 16:55:53,716][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4038920, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model_vgg_cifar10_binary.py", line 90, in train
+    loss = criterion(net(images), labels)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model_vgg_cifar10_binary.py", line 72, in forward
+    x = self.features(x)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 125, in forward
+    input_b = binarized(input)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 58, in binarized
+    return Binarize.apply(input,quant_mode)
+  File "/share/home/rkat6291/flwr_bnn_fromt/models/binarized_modules.py", line 26, in forward
+    return output.div(scale).sign().mul(scale)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB (GPU 0; 9.78 GiB total capacity; 285.28 MiB already allocated; 39.56 MiB free; 290.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-03 16:55:55,468][flwr][DEBUG] - fit_round 2 received 1 results and 1 failures
+[2024-05-03 16:56:00,820][flwr][INFO] - fit progress: (2, 179.93168783187866, {'accuracy': 0.2301}, 42.506687484681606)
+[2024-05-03 16:56:00,820][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-03 16:56:15,344][flwr][DEBUG] - evaluate_round 2 received 5 results and 0 failures
+[2024-05-03 16:56:15,345][flwr][DEBUG] - fit_round 3: strategy sampled 2 clients (out of 50)

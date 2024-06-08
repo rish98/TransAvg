@@ -1,0 +1,135 @@
+[2024-05-07 13:53:51,674][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-07 13:53:54,039][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'CPU': 20.0, 'object_store_memory': 19549580083.0, 'memory': 39099160167.0, 'node:172.17.34.49': 1.0, 'GPU': 4.0, 'accelerator_type:G': 1.0}
+[2024-05-07 13:53:54,040][flwr][INFO] - Initializing global parameters
+[2024-05-07 13:53:54,040][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-07 13:53:56,581][flwr][INFO] - Received initial parameters from one random client
+[2024-05-07 13:53:56,581][flwr][INFO] - Evaluating initial parameters
+[2024-05-07 13:54:00,016][flwr][INFO] - initial parameters (loss, other metrics): 192.34396648406982, {'accuracy': 0.1095}
+[2024-05-07 13:54:00,017][flwr][INFO] - FL starting
+[2024-05-07 13:54:00,017][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:54:50,785][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-07 13:54:56,110][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-07 13:54:58,066][flwr][INFO] - fit progress: (1, 108.60684761404991, {'accuracy': 0.7638}, 58.049275640398264)
+[2024-05-07 13:54:58,066][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-07 13:55:01,958][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-07 13:55:01,959][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-07 13:55:01,959][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:55:52,449][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-07 13:55:59,669][flwr][INFO] - fit progress: (2, 166.6873630285263, {'accuracy': 0.6111}, 119.65238177776337)
+[2024-05-07 13:55:59,669][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-07 13:56:03,613][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-07 13:56:03,614][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:56:54,399][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-07 13:57:01,680][flwr][INFO] - fit progress: (3, 192.25503313541412, {'accuracy': 0.753}, 181.6638313047588)
+[2024-05-07 13:57:01,681][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-07 13:57:05,668][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-07 13:57:05,668][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:57:27,622][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1708956, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([(for a, b in zip(clients_in_round, round_mseloss))])
+            ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:28,722][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1709014, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([for a, b in zip(clients_in_round, round_mseloss))])
+           ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:29,769][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1709089, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([for a, b in zip(clients_in_round, round_mseloss))])
+           ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:30,786][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1709177, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([for a, b in zip(clients_in_round, round_mseloss))])
+           ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:31,824][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1709239, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([for a, b in zip(clients_in_round, round_mseloss))])
+           ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:32,862][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1709294, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (aggregate.py, line 68)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 68
+    print([(for a, b in zip(clients_in_round, round_mseloss))])
+            ^
+SyntaxError: invalid syntax
+[2024-05-07 13:57:32,864][flwr][DEBUG] - fit_round 4 received 4 results and 6 failures

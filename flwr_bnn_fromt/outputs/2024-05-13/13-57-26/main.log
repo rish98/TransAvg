@@ -1,0 +1,49 @@
+[2024-05-13 13:57:26,909][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-13 13:57:30,262][flwr][INFO] - Flower VCE: Ray initialized with resources: {'object_store_memory': 19464961228.0, 'node:__internal_head__': 1.0, 'CPU': 20.0, 'memory': 38929922459.0, 'node:172.17.34.49': 1.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-13 13:57:30,263][flwr][INFO] - Initializing global parameters
+[2024-05-13 13:57:30,263][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-13 13:57:32,852][flwr][INFO] - Received initial parameters from one random client
+[2024-05-13 13:57:32,852][flwr][INFO] - Evaluating initial parameters
+[2024-05-13 13:57:36,249][flwr][INFO] - initial parameters (loss, other metrics): 199.62805795669556, {'accuracy': 0.0861}
+[2024-05-13 13:57:36,249][flwr][INFO] - FL starting
+[2024-05-13 13:57:36,250][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-13 13:58:26,973][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-13 13:58:29,548][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-13 13:58:31,473][flwr][INFO] - fit progress: (1, 67.84139513969421, {'accuracy': 0.7024}, 55.22329941391945)
+[2024-05-13 13:58:31,473][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-13 13:58:35,419][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-13 13:58:35,419][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-13 13:58:35,419][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-13 13:59:25,633][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-13 13:59:30,152][flwr][INFO] - fit progress: (2, 266.89636677503586, {'accuracy': 0.7012}, 113.90289726480842)
+[2024-05-13 13:59:30,153][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-13 13:59:34,040][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-13 13:59:34,041][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-13 14:00:25,276][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-13 14:00:29,783][flwr][INFO] - fit progress: (3, 116.66754162311554, {'accuracy': 0.8536}, 173.53350815176964)
+[2024-05-13 14:00:29,783][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-13 14:00:33,720][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-13 14:00:33,720][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-13 14:01:24,087][flwr][DEBUG] - fit_round 4 received 10 results and 0 failures
+[2024-05-13 14:01:31,308][flwr][INFO] - fit progress: (4, 194.4301585535568, {'accuracy': 0.8843}, 235.05868208780885)
+[2024-05-13 14:01:31,308][flwr][DEBUG] - evaluate_round 4: strategy sampled 1 clients (out of 50)
+[2024-05-13 14:01:35,276][flwr][DEBUG] - evaluate_round 4 received 1 results and 0 failures
+[2024-05-13 14:01:35,277][flwr][DEBUG] - fit_round 5: strategy sampled 10 clients (out of 50)
+[2024-05-13 14:02:25,852][flwr][DEBUG] - fit_round 5 received 10 results and 0 failures
+[2024-05-13 14:02:33,046][flwr][INFO] - fit progress: (5, 168.1483484248747, {'accuracy': 0.9014}, 296.7960742227733)
+[2024-05-13 14:02:33,046][flwr][DEBUG] - evaluate_round 5: strategy sampled 1 clients (out of 50)
+[2024-05-13 14:02:36,975][flwr][DEBUG] - evaluate_round 5 received 1 results and 0 failures
+[2024-05-13 14:02:36,975][flwr][DEBUG] - fit_round 6: strategy sampled 10 clients (out of 50)
+[2024-05-13 14:03:28,075][flwr][DEBUG] - fit_round 6 received 10 results and 0 failures
+[2024-05-13 14:03:35,231][flwr][INFO] - fit progress: (6, 234.32315315886808, {'accuracy': 0.8967}, 358.98105950653553)
+[2024-05-13 14:03:35,231][flwr][DEBUG] - evaluate_round 6: strategy sampled 1 clients (out of 50)
+[2024-05-13 14:03:39,193][flwr][DEBUG] - evaluate_round 6 received 1 results and 0 failures
+[2024-05-13 14:03:39,193][flwr][DEBUG] - fit_round 7: strategy sampled 10 clients (out of 50)
+[2024-05-13 14:03:56,849][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=50341, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: expected an indented block (client.py, line 166)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 166
+    return self.get_parameters({}), len(self.trainloader), {"client_id_num":self.client_id_num,"last_layer":self.model.fc4.weight.flatten()}
+    ^
+IndentationError: expected an indented block

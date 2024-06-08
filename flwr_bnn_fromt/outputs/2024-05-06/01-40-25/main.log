@@ -1,0 +1,45 @@
+[2024-05-06 01:40:26,715][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-06 01:40:29,001][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 20.0, 'node:172.17.34.49': 1.0, 'node:__internal_head__': 1.0, 'memory': 38617603278.0, 'object_store_memory': 19308801638.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-06 01:40:29,002][flwr][INFO] - Initializing global parameters
+[2024-05-06 01:40:29,002][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-06 01:40:31,407][flwr][INFO] - Received initial parameters from one random client
+[2024-05-06 01:40:31,407][flwr][INFO] - Evaluating initial parameters
+[2024-05-06 01:40:36,423][flwr][INFO] - initial parameters (loss, other metrics): 3976.527412414551, {'accuracy': 0.098}
+[2024-05-06 01:40:36,423][flwr][INFO] - FL starting
+[2024-05-06 01:40:36,424][flwr][DEBUG] - fit_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:40:42,626][flwr][DEBUG] - fit_round 1 received 1 results and 0 failures
+[2024-05-06 01:40:42,751][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-06 01:40:45,145][flwr][INFO] - fit progress: (1, 167.8120323419571, {'accuracy': 0.2036}, 8.72185255214572)
+[2024-05-06 01:40:45,145][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-06 01:40:59,385][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-06 01:40:59,385][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-06 01:40:59,386][flwr][DEBUG] - fit_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:41:04,471][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=4000320, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model_vgg_cifar10_binary.py", line 91, in train
+    loss.backward()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+[2024-05-06 01:41:04,472][flwr][DEBUG] - fit_round 2 received 0 results and 1 failures
+[2024-05-06 01:41:06,918][flwr][INFO] - fit progress: (2, 167.8120323419571, {'accuracy': 0.2036}, 30.49483210593462)
+[2024-05-06 01:41:06,918][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-06 01:41:21,245][flwr][DEBUG] - evaluate_round 2 received 5 results and 0 failures
+[2024-05-06 01:41:21,246][flwr][DEBUG] - fit_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:41:27,365][flwr][DEBUG] - fit_round 3 received 1 results and 0 failures
+[2024-05-06 01:41:29,863][flwr][INFO] - fit progress: (3, 162.21712362766266, {'accuracy': 0.224}, 53.43985540419817)
+[2024-05-06 01:41:29,863][flwr][DEBUG] - evaluate_round 3: strategy sampled 5 clients (out of 50)
+[2024-05-06 01:41:44,406][flwr][DEBUG] - evaluate_round 3 received 5 results and 0 failures
+[2024-05-06 01:41:44,407][flwr][DEBUG] - fit_round 4: strategy sampled 1 clients (out of 50)
+[2024-05-06 01:41:50,517][flwr][DEBUG] - fit_round 4 received 1 results and 0 failures
+[2024-05-06 01:41:53,010][flwr][INFO] - fit progress: (4, 167.85611140727997, {'accuracy': 0.2271}, 76.58693046495318)
+[2024-05-06 01:41:53,010][flwr][DEBUG] - evaluate_round 4: strategy sampled 5 clients (out of 50)

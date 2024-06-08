@@ -1,0 +1,25 @@
+[2024-05-07 14:33:11,318][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-07 14:33:13,621][flwr][INFO] - Flower VCE: Ray initialized with resources: {'node:__internal_head__': 1.0, 'memory': 39078260736.0, 'object_store_memory': 19539130368.0, 'CPU': 20.0, 'accelerator_type:G': 1.0, 'GPU': 4.0, 'node:172.17.34.49': 1.0}
+[2024-05-07 14:33:13,622][flwr][INFO] - Initializing global parameters
+[2024-05-07 14:33:13,622][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-07 14:33:16,222][flwr][INFO] - Received initial parameters from one random client
+[2024-05-07 14:33:16,222][flwr][INFO] - Evaluating initial parameters
+[2024-05-07 14:33:19,640][flwr][INFO] - initial parameters (loss, other metrics): 196.14765119552612, {'accuracy': 0.0855}
+[2024-05-07 14:33:19,640][flwr][INFO] - FL starting
+[2024-05-07 14:33:19,640][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-07 14:33:46,785][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1877874, ip=172.17.34.49)
+RuntimeError: The remote function failed to import on the worker. This may be because needed library dependencies are not installed in the worker environment or cannot be found from sys.path ['/share/home/rkat6291/flwr_bnn_fromt', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/ray/thirdparty_files', '/share/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/ray/_private/workers', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python38.zip', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/lib-dynload', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages']:
+
+[36mray::launch_and_fit()[39m (pid=1877874, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 52
+    os.remove(model_path)
+    ^
+IndentationError: expected an indented block

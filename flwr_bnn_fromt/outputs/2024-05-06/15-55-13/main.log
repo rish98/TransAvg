@@ -1,0 +1,65 @@
+[2024-05-06 15:55:14,074][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-06 15:55:16,489][flwr][INFO] - Flower VCE: Ray initialized with resources: {'CPU': 20.0, 'memory': 36512597607.0, 'node:__internal_head__': 1.0, 'object_store_memory': 18256298803.0, 'node:172.17.34.49': 1.0, 'GPU': 4.0, 'accelerator_type:G': 1.0}
+[2024-05-06 15:55:16,490][flwr][INFO] - Initializing global parameters
+[2024-05-06 15:55:16,490][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-06 15:55:18,984][flwr][INFO] - Received initial parameters from one random client
+[2024-05-06 15:55:18,984][flwr][INFO] - Evaluating initial parameters
+[2024-05-06 15:55:22,460][flwr][INFO] - initial parameters (loss, other metrics): 194.04322576522827, {'accuracy': 0.1098}
+[2024-05-06 15:55:22,460][flwr][INFO] - FL starting
+[2024-05-06 15:55:22,461][flwr][DEBUG] - fit_round 1: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:55:34,836][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=107083, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 135.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:55:36,360][flwr][DEBUG] - fit_round 1 received 8 results and 1 failures
+[2024-05-06 15:55:38,466][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-06 15:55:40,427][flwr][INFO] - fit progress: (1, 169.5578896999359, {'accuracy': 0.5398}, 17.9670725800097)
+[2024-05-06 15:55:40,428][flwr][DEBUG] - evaluate_round 1: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:55:46,372][flwr][DEBUG] - evaluate_round 1 received 5 results and 0 failures
+[2024-05-06 15:55:46,372][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-06 15:55:46,373][flwr][DEBUG] - fit_round 2: strategy sampled 9 clients (out of 50)
+[2024-05-06 15:55:58,849][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=108952, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 148, in launch_and_fit
+    return maybe_call_fit(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/client.py", line 184, in maybe_call_fit
+    return client.fit(fit_ins)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/client/app.py", line 297, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 93, in fit
+    train(self.model, self.trainloader, optim, epochs, self.device)
+  File "/share/home/rkat6291/flwr_bnn_fromt/model.py", line 60, in train
+    optimizer.step()
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/torch/optim/adam.py", line 410, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 144.00 MiB (GPU 0; 9.78 GiB total capacity; 1.20 GiB already allocated; 133.56 MiB free; 1.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+[2024-05-06 15:56:00,522][flwr][DEBUG] - fit_round 2 received 8 results and 1 failures
+[2024-05-06 15:56:04,651][flwr][INFO] - fit progress: (2, 243.27166521549225, {'accuracy': 0.6177}, 42.1909302957356)
+[2024-05-06 15:56:04,651][flwr][DEBUG] - evaluate_round 2: strategy sampled 5 clients (out of 50)
+[2024-05-06 15:56:10,624][flwr][DEBUG] - evaluate_round 2 received 5 results and 0 failures
+[2024-05-06 15:56:10,625][flwr][DEBUG] - fit_round 3: strategy sampled 9 clients (out of 50)

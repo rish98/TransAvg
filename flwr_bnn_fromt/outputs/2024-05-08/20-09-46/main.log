@@ -1,0 +1,78 @@
+[2024-05-08 20:09:46,551][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-08 20:09:48,946][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 36439277568.0, 'CPU': 20.0, 'node:172.17.34.49': 1.0, 'node:__internal_head__': 1.0, 'object_store_memory': 18219638784.0, 'accelerator_type:G': 1.0, 'GPU': 4.0}
+[2024-05-08 20:09:48,947][flwr][INFO] - Initializing global parameters
+[2024-05-08 20:09:48,948][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-08 20:09:51,486][flwr][INFO] - Received initial parameters from one random client
+[2024-05-08 20:09:51,486][flwr][INFO] - Evaluating initial parameters
+[2024-05-08 20:09:54,923][flwr][INFO] - initial parameters (loss, other metrics): 193.6505262851715, {'accuracy': 0.1032}
+[2024-05-08 20:09:54,923][flwr][INFO] - FL starting
+[2024-05-08 20:09:54,923][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-08 20:10:45,756][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-08 20:10:50,143][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-08 20:10:52,103][flwr][INFO] - fit progress: (1, 126.98186591267586, {'accuracy': 0.7284}, 57.18040484189987)
+[2024-05-08 20:10:52,104][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-08 20:10:56,043][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-08 20:10:56,043][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-08 20:10:56,043][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-08 20:11:46,626][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-08 20:11:52,891][flwr][INFO] - fit progress: (2, 348.2636556625366, {'accuracy': 0.5697}, 117.9678864479065)
+[2024-05-08 20:11:52,891][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-08 20:11:56,829][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-08 20:11:56,829][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-08 20:12:47,672][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-08 20:12:53,880][flwr][INFO] - fit progress: (3, 275.89916429668665, {'accuracy': 0.7682}, 178.95693405345082)
+[2024-05-08 20:12:53,880][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-08 20:12:57,823][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-08 20:12:57,824][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-08 20:13:10,173][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=206251, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: unexpected indent (aggregate.py, line 75)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 75
+    for entry in last_line.split(','):
+    ^
+IndentationError: unexpected indent
+[2024-05-08 20:13:11,285][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=206312, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: unexpected indent (aggregate.py, line 75)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 5, in <module>
+    from flwr.server.strategy import trans_autoencoder
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 75
+    for entry in last_line.split(','):
+    ^
+IndentationError: unexpected indent
+[2024-05-08 20:13:12,812][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=206369, ip=172.17.34.49)
+RuntimeError: The remote function failed to import on the worker. This may be because needed library dependencies are not installed in the worker environment or cannot be found from sys.path ['/share/home/rkat6291/flwr_bnn_fromt', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/ray/thirdparty_files', '/share/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/ray/_private/workers', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python38.zip', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/lib-dynload', '/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages']:
+
+[36mray::launch_and_fit()[39m (pid=206369, ip=172.17.34.49)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/__init__.py", line 20, in <module>
+    from . import client, common, server, simulation
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/__init__.py", line 18, in <module>
+    from . import strategy
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/__init__.py", line 18, in <module>
+    from .fault_tolerant_fedavg import FaultTolerantFedAvg as FaultTolerantFedAvg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/fault_tolerant_fedavg.py", line 34, in <module>
+    from .aggregate import aggregate, weighted_loss_avg
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.8/site-packages/flwr/server/strategy/aggregate.py", line 75
+    for entry in last_line.split(','):
+    ^
+IndentationError: unexpected indent

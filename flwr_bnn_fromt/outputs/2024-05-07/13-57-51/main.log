@@ -1,0 +1,39 @@
+[2024-05-07 13:57:51,982][flwr][INFO] - Starting Flower simulation, config: ServerConfig(num_rounds=100, round_timeout=None)
+[2024-05-07 13:57:54,398][flwr][INFO] - Flower VCE: Ray initialized with resources: {'memory': 39098700596.0, 'object_store_memory': 19549350297.0, 'node:172.17.34.49': 1.0, 'CPU': 20.0, 'node:__internal_head__': 1.0, 'GPU': 4.0, 'accelerator_type:G': 1.0}
+[2024-05-07 13:57:54,399][flwr][INFO] - Initializing global parameters
+[2024-05-07 13:57:54,399][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-07 13:57:56,979][flwr][INFO] - Received initial parameters from one random client
+[2024-05-07 13:57:56,979][flwr][INFO] - Evaluating initial parameters
+[2024-05-07 13:58:00,397][flwr][INFO] - initial parameters (loss, other metrics): 197.0209014415741, {'accuracy': 0.0973}
+[2024-05-07 13:58:00,397][flwr][INFO] - FL starting
+[2024-05-07 13:58:00,397][flwr][DEBUG] - fit_round 1: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:58:51,348][flwr][DEBUG] - fit_round 1 received 10 results and 0 failures
+[2024-05-07 13:58:56,705][flwr][WARNING] - No fit_metrics_aggregation_fn provided
+[2024-05-07 13:58:58,659][flwr][INFO] - fit progress: (1, 95.03464764356613, {'accuracy': 0.5867}, 58.26219617947936)
+[2024-05-07 13:58:58,659][flwr][DEBUG] - evaluate_round 1: strategy sampled 1 clients (out of 50)
+[2024-05-07 13:59:02,657][flwr][DEBUG] - evaluate_round 1 received 1 results and 0 failures
+[2024-05-07 13:59:02,657][flwr][WARNING] - No evaluate_metrics_aggregation_fn provided
+[2024-05-07 13:59:02,657][flwr][DEBUG] - fit_round 2: strategy sampled 10 clients (out of 50)
+[2024-05-07 13:59:53,378][flwr][DEBUG] - fit_round 2 received 10 results and 0 failures
+[2024-05-07 14:00:00,597][flwr][INFO] - fit progress: (2, 195.60400021076202, {'accuracy': 0.4675}, 120.20042920485139)
+[2024-05-07 14:00:00,598][flwr][DEBUG] - evaluate_round 2: strategy sampled 1 clients (out of 50)
+[2024-05-07 14:00:04,524][flwr][DEBUG] - evaluate_round 2 received 1 results and 0 failures
+[2024-05-07 14:00:04,524][flwr][DEBUG] - fit_round 3: strategy sampled 10 clients (out of 50)
+[2024-05-07 14:00:55,448][flwr][DEBUG] - fit_round 3 received 10 results and 0 failures
+[2024-05-07 14:01:02,670][flwr][INFO] - fit progress: (3, 167.5010870695114, {'accuracy': 0.6789}, 182.27259418740869)
+[2024-05-07 14:01:02,670][flwr][DEBUG] - evaluate_round 3: strategy sampled 1 clients (out of 50)
+[2024-05-07 14:01:06,596][flwr][DEBUG] - evaluate_round 3 received 1 results and 0 failures
+[2024-05-07 14:01:06,597][flwr][DEBUG] - fit_round 4: strategy sampled 10 clients (out of 50)
+[2024-05-07 14:01:57,603][flwr][DEBUG] - fit_round 4 received 10 results and 0 failures
+[2024-05-07 14:02:04,912][flwr][INFO] - fit progress: (4, 67.80775889754295, {'accuracy': 0.7024}, 244.5152195096016)
+[2024-05-07 14:02:04,912][flwr][DEBUG] - evaluate_round 4: strategy sampled 1 clients (out of 50)
+[2024-05-07 14:02:08,846][flwr][DEBUG] - evaluate_round 4 received 1 results and 0 failures
+[2024-05-07 14:02:08,847][flwr][DEBUG] - fit_round 5: strategy sampled 10 clients (out of 50)
+[2024-05-07 14:02:31,458][flwr][ERROR] - [36mray::launch_and_fit()[39m (pid=1736692, ip=172.17.34.49)
+  At least one of the input arguments for this task could not be computed:
+ray.exceptions.RaySystemError: System error: invalid syntax (client.py, line 97)
+traceback: Traceback (most recent call last):
+  File "/share/home/rkat6291/flwr_bnn_fromt/client.py", line 97
+    print(self.client_id_num"ATTACK!")
+                            ^
+SyntaxError: invalid syntax

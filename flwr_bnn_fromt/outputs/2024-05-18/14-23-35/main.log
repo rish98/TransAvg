@@ -1,0 +1,217 @@
+[2024-05-18 14:23:35,085][flwr][INFO] - Starting Flower simulation, config: num_rounds=100, no round_timeout
+[2024-05-18 14:23:36,891][flwr][INFO] - Flower VCE: Ray initialized with resources: {'object_store_memory': 39929108889.0, 'CPU': 24.0, 'memory': 83167920743.0, 'node:172.17.34.3': 1.0, 'GPU': 2.0, 'accelerator_type:G': 1.0, 'node:__internal_head__': 1.0}
+[2024-05-18 14:23:36,892][flwr][INFO] - Optimize your simulation with Flower VCE: https://flower.ai/docs/framework/how-to-run-simulations.html
+[2024-05-18 14:23:36,892][flwr][INFO] - Flower VCE: Resources for each Virtual Client: {'num_cpus': 20, 'num_gpus': 0.5}
+[2024-05-18 14:23:36,897][flwr][INFO] - Flower VCE: Creating VirtualClientEngineActorPool with 1 actors
+[2024-05-18 14:23:36,898][flwr][INFO] - [INIT]
+[2024-05-18 14:23:36,898][flwr][INFO] - Requesting initial parameters from one random client
+[2024-05-18 14:23:38,100][flwr][INFO] - Received initial parameters from one random client
+[2024-05-18 14:23:38,100][flwr][INFO] - Evaluating initial global parameters
+[2024-05-18 14:23:40,006][flwr][INFO] - initial parameters (loss, other metrics): 193.64855027198792, {'accuracy': 0.1025}
+[2024-05-18 14:23:40,006][flwr][INFO] - 
+[2024-05-18 14:23:40,006][flwr][INFO] - [ROUND 1]
+[2024-05-18 14:23:40,006][flwr][INFO] - configure_fit: strategy sampled 10 clients (out of 50)
+[2024-05-18 14:23:42,705][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 73, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 399, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 280, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 2623, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 861, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+[2024-05-18 14:23:42,705][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+[2024-05-18 14:23:44,171][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 73, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 399, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 280, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 2623, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 861, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+[2024-05-18 14:23:44,171][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+[2024-05-18 14:23:45,635][flwr][ERROR] - Traceback (most recent call last):
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_client_proxy.py", line 73, in _submit_job
+    out_mssg, updated_context = self.actor_pool.get_client_result(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 399, in get_client_result
+    return self._fetch_future_result(cid)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 280, in _fetch_future_result
+    res_cid, out_mssg, updated_context = ray.get(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 2623, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/ray/_private/worker.py", line 861, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(ClientAppException): [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+[2024-05-18 14:23:45,635][flwr][ERROR] - [36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
+
+The above exception was the direct cause of the following exception:
+
+[36mray::ClientAppActor.run()[39m (pid=66745, ip=172.17.34.3, actor_id=6fbdb4c5df22699faf5b268901000000, repr=<flwr.simulation.ray_transport.ray_actor.ClientAppActor object at 0x7f79d01d54c0>)
+  File "/home/rkat6291/miniconda3/envs/flower_tutorial/lib/python3.9/site-packages/flwr/simulation/ray_transport/ray_actor.py", line 64, in run
+    raise ClientAppException(str(ex)) from ex
+flwr.client.client_app.ClientAppException: 
+Exception ClientAppException occurred. Message: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'torch.Tensor'>` was passed.
